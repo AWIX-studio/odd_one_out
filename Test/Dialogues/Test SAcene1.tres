@@ -19,8 +19,21 @@ nodes = {
 "options": {
 0: {
 "condition": {},
+"link": &"1_2",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "AWED"
+},
+"1_2": {
+"dialogue": "Продолжение диалога",
+"offset": Vector2(820, 240),
+"options": {
+0: {
+"condition": {},
 "link": "END",
-"text": "окей"
+"text": ""
 }
 },
 "size": Vector2(300, 240),

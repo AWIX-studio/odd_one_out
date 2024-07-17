@@ -1,19 +1,21 @@
-[gd_scene load_steps=10 format=3 uid="uid://dyrqpl2an5ljy"]
+[gd_scene load_steps=12 format=3 uid="uid://dyrqpl2an5ljy"]
 
 [ext_resource type="Script" path="res://addons/dialogue_nodes/objects/DialogueBox.gd" id="1_tnhg8"]
 [ext_resource type="Script" path="res://Test/Test SAcene.gd" id="1_u8ml2"]
+[ext_resource type="Theme" uid="uid://cbf7j8no5y0jt" path="res://Themes/Test SAcene.tres" id="2_a2hua"]
 [ext_resource type="Resource" uid="uid://b8lp3ignm6qnu" path="res://Test/Dialogues/Test SAcene1.tres" id="2_eldtc"]
 [ext_resource type="Script" path="res://addons/dialogue_nodes/objects/bbcodeWait.gd" id="3_dspu2"]
+[ext_resource type="StyleBox" uid="uid://1fji6e7tyj68" path="res://Themes/Test SAcene BG.tres" id="3_dxbat"]
 [ext_resource type="Script" path="res://addons/dialogue_nodes/objects/bbcodeGhost.gd" id="4_32ssv"]
 [ext_resource type="Script" path="res://addons/dialogue_nodes/objects/bbcodeMatrix.gd" id="5_mlfmb"]
 
-[sub_resource type="RichTextEffect" id="RichTextEffect_f373t"]
+[sub_resource type="RichTextEffect" id="RichTextEffect_euf8c"]
 script = ExtResource("3_dspu2")
 
-[sub_resource type="RichTextEffect" id="RichTextEffect_3snht"]
+[sub_resource type="RichTextEffect" id="RichTextEffect_exmgv"]
 script = ExtResource("4_32ssv")
 
-[sub_resource type="RichTextEffect" id="RichTextEffect_0shi6"]
+[sub_resource type="RichTextEffect" id="RichTextEffect_q18at"]
 script = ExtResource("5_mlfmb")
 
 [node name="TestSAcene" type="Control"]
@@ -32,30 +34,28 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -84.5
-offset_top = -15.5
-offset_right = 84.5
-offset_bottom = 15.5
+offset_left = -77.0
+offset_top = 10.0
+offset_right = 92.0
+offset_bottom = 41.0
 grow_horizontal = 2
 grow_vertical = 2
 text = "Click to test dialogue"
 
 [node name="DialogueBox" type="Panel" parent="."]
 layout_mode = 1
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -558.0
-offset_top = -163.0
-offset_right = 558.0
-offset_bottom = -17.0
+anchors_preset = -1
+anchor_left = 0.0355903
+anchor_top = 0.733025
+anchor_right = 0.962674
+anchor_bottom = 0.921296
 grow_horizontal = 2
-grow_vertical = 0
+grow_vertical = 2
+theme = ExtResource("2_a2hua")
+theme_override_styles/panel = ExtResource("3_dxbat")
 script = ExtResource("1_tnhg8")
 data = ExtResource("2_eldtc")
-hide_portrait = true
-custom_effects = Array[RichTextEffect]([SubResource("RichTextEffect_f373t"), SubResource("RichTextEffect_3snht"), SubResource("RichTextEffect_0shi6")])
+custom_effects = Array[RichTextEffect]([SubResource("RichTextEffect_euf8c"), SubResource("RichTextEffect_exmgv"), SubResource("RichTextEffect_q18at")])
+metadata/_edit_use_anchors_ = true
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
