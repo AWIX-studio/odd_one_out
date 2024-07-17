@@ -1,0 +1,32 @@
+[gd_resource type="Resource" script_class="DialogueData" load_steps=2 format=3 uid="uid://b8lp3ignm6qnu"]
+
+[ext_resource type="Script" path="res://addons/dialogue_nodes/objects/DialogueData.gd" id="1_g1iil"]
+
+[resource]
+script = ExtResource("1_g1iil")
+starts = {
+"Dialogue1": &"0_1"
+}
+nodes = {
+"0_1": {
+"link": &"1_1",
+"offset": Vector2(107, 230),
+"start_id": "Dialogue1"
+},
+"1_1": {
+"dialogue": "ЙО это диалоговое окно номер 1",
+"offset": Vector2(420, 240),
+"options": {
+0: {
+"condition": {},
+"link": "END",
+"text": "окей"
+}
+},
+"size": Vector2(300, 240),
+"speaker": "AWED"
+}
+}
+variables = {}
+strays = Array[String]([])
+characters = ""

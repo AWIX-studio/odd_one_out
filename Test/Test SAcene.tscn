@@ -1,0 +1,61 @@
+[gd_scene load_steps=10 format=3 uid="uid://dyrqpl2an5ljy"]
+
+[ext_resource type="Script" path="res://addons/dialogue_nodes/objects/DialogueBox.gd" id="1_tnhg8"]
+[ext_resource type="Script" path="res://Test/Test SAcene.gd" id="1_u8ml2"]
+[ext_resource type="Resource" uid="uid://b8lp3ignm6qnu" path="res://Test/Dialogues/Test SAcene1.tres" id="2_eldtc"]
+[ext_resource type="Script" path="res://addons/dialogue_nodes/objects/bbcodeWait.gd" id="3_dspu2"]
+[ext_resource type="Script" path="res://addons/dialogue_nodes/objects/bbcodeGhost.gd" id="4_32ssv"]
+[ext_resource type="Script" path="res://addons/dialogue_nodes/objects/bbcodeMatrix.gd" id="5_mlfmb"]
+
+[sub_resource type="RichTextEffect" id="RichTextEffect_f373t"]
+script = ExtResource("3_dspu2")
+
+[sub_resource type="RichTextEffect" id="RichTextEffect_3snht"]
+script = ExtResource("4_32ssv")
+
+[sub_resource type="RichTextEffect" id="RichTextEffect_0shi6"]
+script = ExtResource("5_mlfmb")
+
+[node name="TestSAcene" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_u8ml2")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -84.5
+offset_top = -15.5
+offset_right = 84.5
+offset_bottom = 15.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Click to test dialogue"
+
+[node name="DialogueBox" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -558.0
+offset_top = -163.0
+offset_right = 558.0
+offset_bottom = -17.0
+grow_horizontal = 2
+grow_vertical = 0
+script = ExtResource("1_tnhg8")
+data = ExtResource("2_eldtc")
+hide_portrait = true
+custom_effects = Array[RichTextEffect]([SubResource("RichTextEffect_f373t"), SubResource("RichTextEffect_3snht"), SubResource("RichTextEffect_0shi6")])
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
