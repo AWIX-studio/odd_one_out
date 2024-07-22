@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://tdmgoapqegfh"]
+[gd_scene load_steps=8 format=3 uid="uid://tdmgoapqegfh"]
 
 [ext_resource type="Script" path="res://Scenes/Menu/MainMenu.gd" id="1_7rbbp"]
 [ext_resource type="FontFile" uid="uid://0frsxwr53hps" path="res://Themes/Fonts/Montserrat-Medium.ttf" id="1_g8w2u"]
+[ext_resource type="Texture2D" uid="uid://cfjaphq5qac3b" path="res://Textures/hd_8be18f226eee8433bdc9ef9369fbd2bd_669e80d12dd96.png" id="2_2edyg"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e32it"]
 bg_color = Color(0.286702, 0.277336, 0.252072, 1)
@@ -48,36 +49,51 @@ grow_vertical = 2
 script = ExtResource("1_7rbbp")
 
 [node name="BG" type="ColorRect" parent="."]
+layout_mode = 0
 offset_left = -42.0
 offset_top = -24.0
 offset_right = 1176.0
 offset_bottom = 688.0
 color = Color(1, 0.752941, 0.85098, 1)
 
-[node name="FG1" type="ColorRect" parent="."]
-offset_left = -100.0
-offset_top = -89.0
-offset_right = 1185.0
-offset_bottom = 243.0
+[node name="FG" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Sprite2D" type="Sprite2D" parent="FG"]
+position = Vector2(836, 323)
+scale = Vector2(0.14207, 0.14207)
+texture = ExtResource("2_2edyg")
+
+[node name="FG1" type="ColorRect" parent="FG"]
+offset_left = -1678.0
+offset_top = -1063.0
+offset_right = 4201.0
+offset_bottom = 525.0
+rotation = -0.191986
+scale = Vector2(0.593188, 1)
+color = Color(1, 0.564706, 0.737255, 1)
+
+[node name="FG2" type="ColorRect" parent="FG"]
+offset_left = -1696.0
+offset_top = 1011.0
+offset_right = 3121.0
+offset_bottom = 3040.0
 rotation = -0.191986
 color = Color(1, 0.564706, 0.737255, 1)
 
-[node name="FG2" type="ColorRect" parent="."]
-offset_left = 38.0
-offset_top = 674.0
-offset_right = 1323.0
-offset_bottom = 1006.0
-rotation = -0.191986
-color = Color(1, 0.564706, 0.737255, 1)
-
-[node name="Title" type="Label" parent="."]
+[node name="Title" type="Label" parent="FG"]
+layout_mode = 0
 offset_left = 32.0
 offset_top = 16.0
 offset_right = 577.0
 offset_bottom = 109.0
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.12549)
+theme_override_colors/font_outline_color = Color(1, 0.431428, 0.667775, 1)
 theme_override_constants/shadow_offset_x = 4
 theme_override_constants/shadow_offset_y = 4
+theme_override_constants/outline_size = 10
 theme_override_fonts/font = ExtResource("1_g8w2u")
 theme_override_font_sizes/font_size = 61
 text = "Выбери лишнее!"

@@ -25,7 +25,7 @@ nodes = {
 }
 },
 "size": Vector2(300, 240),
-"speaker": ""
+"speaker": 0
 },
 "1_2": {
 "dialogue": "И тут вдруг говорю я",

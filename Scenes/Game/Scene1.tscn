@@ -47,21 +47,27 @@ grow_vertical = 2
 script = ExtResource("1_gw203")
 
 [node name="DialogueBox" type="Panel" parent="."]
-visible = false
+custom_minimum_size = Vector2(1100, 180)
 layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.0355903
-anchor_top = 0.660494
-anchor_right = 0.962674
-anchor_bottom = 0.921296
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -547.0
+offset_top = -188.0
+offset_right = 553.0
+offset_bottom = -8.0
 grow_horizontal = 2
-grow_vertical = 2
+grow_vertical = 0
 theme = ExtResource("2_tdb6j")
 theme_override_styles/panel = ExtResource("3_f158i")
 script = ExtResource("4_finaf")
 data = ExtResource("5_alu5d")
+hide_portrait = true
+scroll_speed = 2
+skip_input_action = "skip"
 custom_effects = Array[RichTextEffect]([SubResource("RichTextEffect_euf8c"), SubResource("RichTextEffect_exmgv"), SubResource("RichTextEffect_q18at")])
-metadata/_edit_use_anchors_ = true
 
 [node name="Button" type="Button" parent="."]
 layout_mode = 0
