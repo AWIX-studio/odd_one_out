@@ -5,17 +5,18 @@
 [resource]
 script = ExtResource("1_g1iil")
 starts = {
-"Dialogue1": &"0_1"
+"START": &"0_1"
 }
 nodes = {
 "0_1": {
 "link": &"1_1",
-"offset": Vector2(107, 230),
-"start_id": "Dialogue1"
+"offset": Vector2(-320, -420),
+"start_id": "START"
 },
 "1_1": {
-"dialogue": "ЙО это диалоговое окно номер 1",
-"offset": Vector2(420, 240),
+"dialogue": "Вот так выглядит пример текста без автора. Это, например, мысли гг, или действия. из кстати можно записать * вот в таких звёздочках *
+^^",
+"offset": Vector2(0, -320),
 "options": {
 0: {
 "condition": {},
@@ -24,11 +25,11 @@ nodes = {
 }
 },
 "size": Vector2(300, 240),
-"speaker": "AWED"
+"speaker": ""
 },
 "1_2": {
-"dialogue": "Продолжение диалога",
-"offset": Vector2(820, 240),
+"dialogue": "И тут вдруг говорю я",
+"offset": Vector2(400, -320),
 "options": {
 0: {
 "condition": {},
@@ -37,9 +38,9 @@ nodes = {
 }
 },
 "size": Vector2(300, 240),
-"speaker": "AWED"
+"speaker": 1
 }
 }
 variables = {}
 strays = Array[String]([])
-characters = ""
+characters = "res://Dialogues/Characters/Characters.tres"

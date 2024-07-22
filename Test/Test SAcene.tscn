@@ -46,7 +46,7 @@ text = "Click to test dialogue"
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.0355903
-anchor_top = 0.733025
+anchor_top = 0.660494
 anchor_right = 0.962674
 anchor_bottom = 0.921296
 grow_horizontal = 2
@@ -59,3 +59,4 @@ custom_effects = Array[RichTextEffect]([SubResource("RichTextEffect_euf8c"), Sub
 metadata/_edit_use_anchors_ = true
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="option_selected" from="DialogueBox" to="." method="_on_dialogue_box_option_selected"]

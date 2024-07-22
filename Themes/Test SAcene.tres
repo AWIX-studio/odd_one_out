@@ -1,16 +1,21 @@
-[gd_resource type="Theme" load_steps=3 format=3 uid="uid://cbf7j8no5y0jt"]
+[gd_resource type="Theme" load_steps=4 format=3 uid="uid://cbf7j8no5y0jt"]
 
 [ext_resource type="FontFile" uid="uid://0frsxwr53hps" path="res://Themes/Fonts/Montserrat-Medium.ttf" id="2_d13vg"]
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lgtau"]
+content_margin_left = 10.0
+
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vbfnh"]
-content_margin_left = 9.0
-content_margin_top = 10.0
+content_margin_left = 10.0
+content_margin_top = 20.0
 
 [resource]
 default_font = ExtResource("2_d13vg")
-default_font_size = 18
-Label/colors/font_outline_color = Color(0.142299, 0.550137, 0.81525, 1)
-Label/constants/outline_size = 7
+Label/colors/font_outline_color = Color(0, 0, 0, 1)
+Label/constants/outline_size = 3
+Label/font_sizes/font_size = 26
+Label/styles/normal = SubResource("StyleBoxEmpty_lgtau")
 RichTextLabel/colors/font_outline_color = Color(0, 0, 0, 0.603922)
 RichTextLabel/constants/outline_size = 5
+RichTextLabel/font_sizes/normal_font_size = 20
 RichTextLabel/styles/normal = SubResource("StyleBoxEmpty_vbfnh")

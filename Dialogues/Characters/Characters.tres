@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="CharacterList" load_steps=5 format=3 uid="uid://7we282bw05p3"]
+
+[ext_resource type="Script" path="res://addons/dialogue_nodes/objects/Character.gd" id="1_mgf42"]
+[ext_resource type="Script" path="res://addons/dialogue_nodes/objects/CharacterList.gd" id="2_tdrix"]
+
+[sub_resource type="Resource" id="Resource_0ilsg"]
+resource_name = "гг"
+script = ExtResource("1_mgf42")
+name = "Главный Герой"
+color = Color(0.6091, 0.898153, 1, 1)
+
+[sub_resource type="Resource" id="Resource_fcafs"]
+resource_name = "ещё челик"
+script = ExtResource("1_mgf42")
+name = "Второстепенный герой"
+color = Color(1, 0.795269, 0.916137, 1)
+
+[resource]
+script = ExtResource("2_tdrix")
+characters = Array[ExtResource("1_mgf42")]([SubResource("Resource_0ilsg"), SubResource("Resource_fcafs")])

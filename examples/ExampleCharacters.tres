@@ -38,7 +38,7 @@ nodes = {
 }
 },
 "size": Vector2(300, 275),
-"speaker": 0
+"speaker": -1
 },
 "1_3": {
 "dialogue": "What's more you can even put character profiles to spice up the dialogue.",
@@ -51,7 +51,7 @@ nodes = {
 }
 },
 "size": Vector2(300, 275),
-"speaker": 1
+"speaker": -1
 }
 }
 variables = {}
