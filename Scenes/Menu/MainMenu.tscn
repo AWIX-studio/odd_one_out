@@ -67,10 +67,10 @@ scale = Vector2(0.14207, 0.14207)
 texture = ExtResource("2_2edyg")
 
 [node name="FG1" type="ColorRect" parent="FG"]
-offset_left = -1678.0
-offset_top = -1063.0
-offset_right = 4201.0
-offset_bottom = 525.0
+offset_left = -1704.0
+offset_top = -1037.0
+offset_right = 4175.0
+offset_bottom = 551.0
 rotation = -0.191986
 scale = Vector2(0.593188, 1)
 color = Color(1, 0.564706, 0.737255, 1)
