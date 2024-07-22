@@ -124,4 +124,5 @@ theme_override_fonts/font = ExtResource("1_g8w2u")
 theme_override_font_sizes/font_size = 30
 text = "Выход"
 
-[connection signal="button_down" from="Buttons menu/VBoxContainer/Play" to="." method="_on_play_button_down"]
+[connection signal="pressed" from="Buttons menu/VBoxContainer/Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="Buttons menu/VBoxContainer/Quit" to="." method="_on_quit_pressed"]
