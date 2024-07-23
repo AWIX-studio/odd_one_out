@@ -4,7 +4,7 @@
 [ext_resource type="Theme" uid="uid://cbf7j8no5y0jt" path="res://Themes/Test SAcene.tres" id="2_tdb6j"]
 [ext_resource type="StyleBox" uid="uid://1fji6e7tyj68" path="res://Themes/Test SAcene BG.tres" id="3_f158i"]
 [ext_resource type="Script" path="res://addons/dialogue_nodes/objects/DialogueBox.gd" id="4_finaf"]
-[ext_resource type="Resource" uid="uid://kthq0j0lf37b" path="res://Dialogues/chapter 0.tres" id="5_a20bo"]
+[ext_resource type="Resource" path="res://Dialogues/chapter 0.tres" id="5_a20bo"]
 [ext_resource type="Script" path="res://addons/dialogue_nodes/objects/bbcodeWait.gd" id="6_qlwic"]
 [ext_resource type="Script" path="res://addons/dialogue_nodes/objects/bbcodeGhost.gd" id="7_jbnk1"]
 [ext_resource type="Script" path="res://addons/dialogue_nodes/objects/bbcodeMatrix.gd" id="8_mvk85"]
