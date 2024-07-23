@@ -34,6 +34,7 @@ Button/colors/font_color = Color(0.40833, 0.408329, 0.408329, 1)
 Button/colors/font_focus_color = Color(0.407843, 0.407843, 0.407843, 1)
 Button/colors/font_pressed_color = Color(1, 1, 1, 1)
 Button/constants/h_separation = 4
+Button/constants/outline_size = 0
 Button/fonts/font = ExtResource("1_g8w2u")
 Button/styles/hover = SubResource("StyleBoxFlat_e32it")
 Button/styles/normal = SubResource("StyleBoxFlat_d8rr0")
@@ -56,17 +57,29 @@ offset_right = 1176.0
 offset_bottom = 688.0
 color = Color(1, 0.752941, 0.85098, 1)
 
-[node name="FG" type="Control" parent="."]
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+[node name="FG2" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
-[node name="Sprite2D" type="Sprite2D" parent="FG"]
+[node name="Sprite2D" type="Sprite2D" parent="FG2"]
 position = Vector2(836, 323)
 scale = Vector2(0.14207, 0.14207)
 texture = ExtResource("2_2edyg")
 
+[node name="FG" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
 [node name="FG1" type="ColorRect" parent="FG"]
+layout_mode = 0
 offset_left = -1704.0
 offset_top = -1037.0
 offset_right = 4175.0
@@ -76,6 +89,7 @@ scale = Vector2(0.593188, 1)
 color = Color(1, 0.564706, 0.737255, 1)
 
 [node name="FG2" type="ColorRect" parent="FG"]
+layout_mode = 0
 offset_left = -1696.0
 offset_top = 1011.0
 offset_right = 3121.0
@@ -85,10 +99,10 @@ color = Color(1, 0.564706, 0.737255, 1)
 
 [node name="Title" type="Label" parent="FG"]
 layout_mode = 0
-offset_left = 32.0
-offset_top = 16.0
-offset_right = 577.0
-offset_bottom = 109.0
+offset_left = 36.0
+offset_top = 37.0
+offset_right = 581.0
+offset_bottom = 130.0
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.12549)
 theme_override_colors/font_outline_color = Color(1, 0.431428, 0.667775, 1)
 theme_override_constants/shadow_offset_x = 4
@@ -99,46 +113,86 @@ theme_override_font_sizes/font_size = 61
 text = "Выбери лишнее!"
 horizontal_alignment = 1
 
-[node name="Buttons menu" type="Control" parent="."]
+[node name="Buttons" type="Control" parent="."]
 anchors_preset = 0
 offset_left = 40.0
 offset_top = 244.0
 offset_right = 308.0
 offset_bottom = 570.0
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Buttons menu"]
+[node name="Main menu" type="Control" parent="Buttons"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Buttons/Main menu"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -130.0
-offset_top = -48.0
-offset_right = 130.0
-offset_bottom = 48.0
+offset_left = -16.0
+offset_top = 71.0
+offset_right = 244.0
+offset_bottom = 215.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = SubResource("Theme_eyq7o")
 theme_override_constants/separation = 15
 
-[node name="Play" type="Button" parent="Buttons menu/VBoxContainer"]
+[node name="Play" type="Button" parent="Buttons/Main menu/VBoxContainer"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("1_g8w2u")
 theme_override_font_sizes/font_size = 30
 text = "Новая игра!"
 
-[node name="Options" type="Button" parent="Buttons menu/VBoxContainer"]
+[node name="Options" type="Button" parent="Buttons/Main menu/VBoxContainer"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("1_g8w2u")
 theme_override_font_sizes/font_size = 30
 text = "Настройки"
 
-[node name="Quit" type="Button" parent="Buttons menu/VBoxContainer"]
+[node name="Quit" type="Button" parent="Buttons/Main menu/VBoxContainer"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("1_g8w2u")
 theme_override_font_sizes/font_size = 30
 text = "Выход"
 
-[connection signal="pressed" from="Buttons menu/VBoxContainer/Play" to="." method="_on_play_pressed"]
-[connection signal="pressed" from="Buttons menu/VBoxContainer/Quit" to="." method="_on_quit_pressed"]
+[node name="Options" type="Control" parent="Buttons"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Buttons/Options"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -16.0
+offset_top = 71.0
+offset_right = 244.0
+offset_bottom = 215.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_eyq7o")
+theme_override_constants/separation = 15
+
+[node name="CheckBox" type="CheckBox" parent="Buttons/Options/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_g8w2u")
+theme_override_font_sizes/font_size = 30
+text = "Сглаживание"
+
+[node name="Back" type="Button" parent="Buttons/Options/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_g8w2u")
+theme_override_font_sizes/font_size = 30
+text = "Назад"
+
+[connection signal="pressed" from="Buttons/Main menu/VBoxContainer/Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="Buttons/Main menu/VBoxContainer/Options" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="Buttons/Main menu/VBoxContainer/Quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="Buttons/Options/VBoxContainer/Back" to="." method="_on_back_pressed"]
