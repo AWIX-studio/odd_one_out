@@ -160,6 +160,7 @@ theme_override_font_sizes/font_size = 30
 text = "Выход"
 
 [node name="Options" type="Control" parent="Buttons"]
+visible = false
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
@@ -195,4 +196,5 @@ text = "Назад"
 [connection signal="pressed" from="Buttons/Main menu/VBoxContainer/Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="Buttons/Main menu/VBoxContainer/Options" to="." method="_on_options_pressed"]
 [connection signal="pressed" from="Buttons/Main menu/VBoxContainer/Quit" to="." method="_on_quit_pressed"]
+[connection signal="toggled" from="Buttons/Options/VBoxContainer/CheckBox" to="." method="_on_check_box_toggled"]
 [connection signal="pressed" from="Buttons/Options/VBoxContainer/Back" to="." method="_on_back_pressed"]

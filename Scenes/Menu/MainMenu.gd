@@ -38,3 +38,10 @@ func _on_options_pressed():
 func _on_back_pressed():
 	$"Buttons/Main menu".visible = true
 	$Buttons/Options.visible = false
+
+
+func _on_check_box_toggled(toggled_on):
+	if toggled_on:
+		ProjectSettings.set_setting("rendering/anti_aliasing/quality/msaa_2d", 1)
+	else:
+		ProjectSettings.set_setting("rendering/anti_aliasing/quality/msaa_2d", 0)
