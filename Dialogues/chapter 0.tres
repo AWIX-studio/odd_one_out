@@ -55,7 +55,11 @@ nodes = {
 "text": ""
 }
 },
+<<<<<<< Updated upstream
 "size": Vector2(300.001, 240),
+=======
+"size": Vector2(300.002, 240),
+>>>>>>> Stashed changes
 "speaker": 1
 },
 "1_12": {
@@ -68,7 +72,7 @@ nodes = {
 "text": ""
 }
 },
-"size": Vector2(300, 240),
+"size": Vector2(300.001, 240),
 "speaker": 0
 },
 "1_13": {
@@ -94,7 +98,7 @@ nodes = {
 "text": ""
 }
 },
-"size": Vector2(300, 240),
+"size": Vector2(300.001, 240),
 "speaker": ""
 },
 "1_2": {
@@ -185,7 +189,7 @@ nodes = {
 "text": ""
 }
 },
-"size": Vector2(300, 240),
+"size": Vector2(300.001, 240),
 "speaker": 0
 },
 "1_9": {
@@ -198,14 +202,14 @@ nodes = {
 "text": ""
 }
 },
-"size": Vector2(300, 240),
+"size": Vector2(300.001, 240),
 "speaker": 1
 }
 }
 variables = {
 "name": {
 "type": 4,
-"value": "авед"
+"value": "агу агууу бооо жди докс докс портики боо мамаааа агу агу"
 }
 }
 strays = Array[String]([])
