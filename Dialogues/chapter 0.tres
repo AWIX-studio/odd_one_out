@@ -205,7 +205,7 @@ nodes = {
 variables = {
 "name": {
 "type": 4,
-"value": "агк"
+"value": "авед"
 }
 }
 strays = Array[String]([])
