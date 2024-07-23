@@ -10,13 +10,12 @@ starts = {
 nodes = {
 "0_1": {
 "link": &"1_1",
-"offset": Vector2(-320, -420),
+"offset": Vector2(-600, -400),
 "start_id": "START"
 },
 "1_1": {
-"dialogue": "Вот так выглядит пример текста без автора. Это, например, мысли гг, или действия. из кстати можно записать * вот в таких звёздочках *
-^^",
-"offset": Vector2(0, -320),
+"dialogue": "Йо смотри какое у меня имя.",
+"offset": Vector2(-40, -360),
 "options": {
 0: {
 "condition": {},
@@ -28,8 +27,8 @@ nodes = {
 "speaker": 0
 },
 "1_2": {
-"dialogue": "И тут вдруг говорю я",
-"offset": Vector2(400, -320),
+"dialogue": "Жеесть, тебя реально зовут {{name}}",
+"offset": Vector2(360, -360),
 "options": {
 0: {
 "condition": {},
@@ -41,6 +40,11 @@ nodes = {
 "speaker": 1
 }
 }
-variables = {}
+variables = {
+"name": {
+"type": 4,
+"value": ""
+}
+}
 strays = Array[String]([])
 characters = "res://Dialogues/Characters/Characters.tres"

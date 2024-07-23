@@ -23,7 +23,8 @@ func _input(event):
 
 
 func _on_play_pressed():
-	get_tree().change_scene_to_file('res://Scenes/Game/Scene1.tscn')
+	$Buttons/MainMenu.visible = false
+	$SetName.visible = true
 
 
 func _on_quit_pressed():
@@ -31,17 +32,31 @@ func _on_quit_pressed():
 
 
 func _on_options_pressed():
-	$"Buttons/Main menu".visible = false
+	$Buttons/MainMenu.visible = false
 	$Buttons/Options.visible = true
 
 
 func _on_back_pressed():
-	$"Buttons/Main menu".visible = true
+	$Buttons/MainMenu.visible = true
 	$Buttons/Options.visible = false
 
+func _on_new_game_pressed():
+	if $SetName/TextEdit.text != "":
+		set_player_name($SetName/TextEdit.text)
+		get_tree().change_scene_to_file('res://Scenes/Game/Scene1.tscn')
+	else: pass
 
 func _on_check_box_toggled(toggled_on):
 	if toggled_on:
 		ProjectSettings.set_setting("rendering/anti_aliasing/quality/msaa_2d", 1)
 	else:
 		ProjectSettings.set_setting("rendering/anti_aliasing/quality/msaa_2d", 0)
+
+func set_player_name(name:String):
+	var Characters = preload("res://Dialogues/Characters/Characters.tres")
+	Characters.characters[0].name = name
+	ResourceSaver.save(Characters)
+	var PlayerName = preload("res://Test/Dialogues/Test SAcene1.tres")
+	PlayerName.variables['name']['value'] = Characters.characters[0].name
+	ResourceSaver.save(PlayerName)
+
