@@ -1,0 +1,217 @@
+[gd_resource type="Resource" script_class="DialogueData" load_steps=2 format=3 uid="uid://kthq0j0lf37b"]
+
+[ext_resource type="Script" path="res://addons/dialogue_nodes/objects/DialogueData.gd" id="1_7q5ow"]
+
+[resource]
+script = ExtResource("1_7q5ow")
+starts = {
+"START": &"0_1",
+"START2": &"0_2"
+}
+nodes = {
+"0_1": {
+"link": &"1_1",
+"offset": Vector2(0, 340),
+"start_id": "START"
+},
+"0_2": {
+"link": &"1_7",
+"offset": Vector2(2040, 340),
+"start_id": "START2"
+},
+"0_3": {
+"link": "END",
+"offset": Vector2(4620, 340),
+"start_id": "START3"
+},
+"1_1": {
+"dialogue": "{{name}}, а пойдëм погуляем в тот парк! Он такой красивый! ",
+"offset": Vector2(240, 340),
+"options": {
+0: {
+"condition": {},
+"link": &"1_2",
+"text": ""
+}
+},
+"size": Vector2(300.001, 240),
+"speaker": 1
+},
+"1_10": {
+"dialogue": "Ну не знаю. Мне приходится самому себе готовить еду, убираться, а я ничего из этого не умею толком. ",
+"offset": Vector2(3120, 340),
+"options": {
+0: {
+"condition": {},
+"link": &"1_11",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": 0
+},
+"1_11": {
+"dialogue": "Вот значит пока нет родителей, этим займусь я, хи-хи! ",
+"offset": Vector2(3420, 340),
+"options": {
+0: {
+"condition": {},
+"link": &"1_12",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": 1
+},
+"1_12": {
+"dialogue": "Ну я ещë подумаю, оставлять ли тебя в гостях на долго...",
+"offset": Vector2(3720, 340),
+"options": {
+0: {
+"condition": {},
+"link": &"1_13",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": 0
+},
+"1_13": {
+"dialogue": "Уж подумай! *улыбнулась*",
+"offset": Vector2(4020, 340),
+"options": {
+0: {
+"condition": {},
+"link": &"1_14",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": 1
+},
+"1_14": {
+"dialogue": "И ведь классное было время... ",
+"offset": Vector2(4320, 340),
+"options": {
+0: {
+"condition": {},
+"link": "END",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": ""
+},
+"1_2": {
+"dialogue": "Ты на время посмотри. Потом опять будешь на парте спать. ",
+"offset": Vector2(540, 340),
+"options": {
+0: {
+"condition": {},
+"link": &"1_3",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": 0
+},
+"1_3": {
+"dialogue": "Да ладно тебе, побежали! ",
+"offset": Vector2(840, 340),
+"options": {
+0: {
+"condition": {},
+"link": &"1_4",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": 1
+},
+"1_4": {
+"dialogue": "Не-не-не, я за здоровый сон и вообще... Стой! ",
+"offset": Vector2(1140, 340),
+"options": {
+0: {
+"condition": {},
+"link": &"1_5",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": 0
+},
+"1_5": {
+"dialogue": "Вот чëрт, опять бежать за ней... ",
+"offset": Vector2(1440, 340),
+"options": {
+0: {
+"condition": {},
+"link": &"1_6",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": 0
+},
+"1_6": {
+"dialogue": "Я так рад, что познакомился с ней... ",
+"offset": Vector2(1740, 340),
+"options": {
+0: {
+"condition": {},
+"link": "END",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": ""
+},
+"1_7": {
+"dialogue": "Слушай, а можно после школы к тебе? Сегодня же последний день учëбы, надо весело провести время! ",
+"offset": Vector2(2220, 340),
+"options": {
+0: {
+"condition": {},
+"link": &"1_8",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": 1
+},
+"1_8": {
+"dialogue": "Ну, если родители ещë не вернулись из другого города, то хорошо. ",
+"offset": Vector2(2520, 340),
+"options": {
+0: {
+"condition": {},
+"link": &"1_9",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": 0
+},
+"1_9": {
+"dialogue": "Ура! Блин, всë таки завидую тебе... 13 лет, а уже спокойно оставляют одного дома... ",
+"offset": Vector2(2820, 340),
+"options": {
+0: {
+"condition": {},
+"link": &"1_10",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": 1
+}
+}
+variables = {
+"name": {
+"type": 4,
+"value": "Mr. Finger Control"
+}
+}
+strays = Array[String](["0_3"])
+characters = "res://Dialogues/Characters/Characters.tres"

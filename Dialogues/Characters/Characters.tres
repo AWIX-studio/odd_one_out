@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="CharacterList" load_steps=5 format=3 uid="uid://7we282bw05p3"]
+[gd_resource type="Resource" script_class="CharacterList" load_steps=8 format=3 uid="uid://7we282bw05p3"]
 
 [ext_resource type="Script" path="res://addons/dialogue_nodes/objects/Character.gd" id="1_mgf42"]
 [ext_resource type="Script" path="res://addons/dialogue_nodes/objects/CharacterList.gd" id="2_tdrix"]
@@ -7,14 +7,32 @@
 resource_name = "гг"
 script = ExtResource("1_mgf42")
 name = "Главный Герой"
-color = Color(0.6091, 0.898153, 1, 1)
+color = Color(0.817802, 0.817802, 0.814794, 1)
 
 [sub_resource type="Resource" id="Resource_fcafs"]
-resource_name = "ещё челик"
+resource_name = "Вакуми"
 script = ExtResource("1_mgf42")
-name = "Второстепенный герой"
+name = "Вакуми"
 color = Color(1, 0.795269, 0.916137, 1)
+
+[sub_resource type="Resource" id="Resource_mkd8u"]
+resource_name = "Аими"
+script = ExtResource("1_mgf42")
+name = "Аими"
+color = Color(1, 0.604017, 0.571223, 1)
+
+[sub_resource type="Resource" id="Resource_mwnwc"]
+resource_name = "Натсуми"
+script = ExtResource("1_mgf42")
+name = "Натсуми"
+color = Color(0.616697, 0.826383, 0.940097, 1)
+
+[sub_resource type="Resource" id="Resource_61v6p"]
+resource_name = "Изуми"
+script = ExtResource("1_mgf42")
+name = "Изуми"
+color = Color(1, 0.714234, 0.776208, 1)
 
 [resource]
 script = ExtResource("2_tdrix")
-characters = Array[ExtResource("1_mgf42")]([SubResource("Resource_0ilsg"), SubResource("Resource_fcafs")])
+characters = Array[ExtResource("1_mgf42")]([SubResource("Resource_0ilsg"), SubResource("Resource_fcafs"), SubResource("Resource_mkd8u"), SubResource("Resource_mwnwc"), SubResource("Resource_61v6p")])
