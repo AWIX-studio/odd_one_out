@@ -43,7 +43,7 @@ nodes = {
 variables = {
 "name": {
 "type": 4,
-"value": "Главный Герой"
+"value": "авед"
 }
 }
 strays = Array[String]([])

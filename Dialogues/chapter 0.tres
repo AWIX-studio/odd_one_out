@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="DialogueData" load_steps=2 format=3 uid="uid://kthq0j0lf37b"]
+[gd_resource type="Resource" script_class="DialogueData" load_steps=2 format=3]
 
 [ext_resource type="Script" path="res://addons/dialogue_nodes/objects/DialogueData.gd" id="1_7q5ow"]
 
@@ -18,11 +18,6 @@ nodes = {
 "link": &"1_7",
 "offset": Vector2(2040, 340),
 "start_id": "START2"
-},
-"0_3": {
-"link": "END",
-"offset": Vector2(4620, 340),
-"start_id": "START3"
 },
 "1_1": {
 "dialogue": "{{name}}, а пойдëм погуляем в тот парк! Он такой красивый! ",
@@ -60,7 +55,7 @@ nodes = {
 "text": ""
 }
 },
-"size": Vector2(300, 240),
+"size": Vector2(300.001, 240),
 "speaker": 1
 },
 "1_12": {
@@ -210,8 +205,8 @@ nodes = {
 variables = {
 "name": {
 "type": 4,
-"value": "Mr. Finger Control"
+"value": "авед"
 }
 }
-strays = Array[String](["0_3"])
+strays = Array[String]([])
 characters = "res://Dialogues/Characters/Characters.tres"
