@@ -13,6 +13,8 @@ func _on_button_pressed():
 	elif click_count == 1:
 		remove_child(screen_button)
 		$DialogueBox.start("START2")
+	
+	click_count += 1
 
 
 func _on_dialogue_box_dialogue_ended():
