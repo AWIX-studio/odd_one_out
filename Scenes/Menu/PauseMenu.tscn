@@ -1,7 +1,8 @@
-[gd_scene load_steps=10 format=3 uid="uid://dhcex8jyifhts"]
+[gd_scene load_steps=6 format=3 uid="uid://dhcex8jyifhts"]
 
 [ext_resource type="FontFile" uid="uid://0frsxwr53hps" path="res://Themes/Fonts/Montserrat-Medium.ttf" id="1_vovv6"]
 [ext_resource type="Script" path="res://Scenes/Menu/PauseMenu.gd" id="2_aj3oq"]
+[ext_resource type="Theme" uid="uid://dwmw6lugevjxo" path="res://Themes/MenuButtonsDesign.tres" id="3_cl5cf"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_eds72"]
 bg_color = Color(1, 0.564706, 0.737255, 1)
@@ -13,46 +14,6 @@ Label/colors/font_shadow_color = Color(0, 0, 0, 0.172549)
 Label/constants/shadow_offset_x = 2
 Label/constants/shadow_offset_y = 2
 Panel/styles/panel = SubResource("StyleBoxFlat_eds72")
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jjrbp"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e32it"]
-bg_color = Color(0.286702, 0.277336, 0.252072, 1)
-border_color = Color(0.8, 0.8, 0.8, 0)
-corner_radius_top_left = 20
-corner_radius_top_right = 20
-corner_radius_bottom_right = 20
-corner_radius_bottom_left = 20
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d8rr0"]
-bg_color = Color(0.976471, 0.976471, 0.878431, 1)
-corner_radius_top_left = 20
-corner_radius_top_right = 20
-corner_radius_bottom_right = 20
-corner_radius_bottom_left = 20
-shadow_color = Color(0, 0, 0, 0)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ghykn"]
-bg_color = Color(0, 0, 0, 1)
-border_color = Color(0.8, 0.8, 0.8, 0)
-corner_radius_top_left = 20
-corner_radius_top_right = 20
-corner_radius_bottom_right = 20
-corner_radius_bottom_left = 20
-
-[sub_resource type="Theme" id="Theme_0nw8i"]
-default_font = ExtResource("1_vovv6")
-Button/colors/font_color = Color(0.40833, 0.408329, 0.408329, 1)
-Button/colors/font_focus_color = Color(0.407843, 0.407843, 0.407843, 1)
-Button/colors/font_pressed_color = Color(1, 1, 1, 1)
-Button/constants/h_separation = 4
-Button/constants/outline_size = 0
-Button/font_sizes/font_size = 20
-Button/fonts/font = ExtResource("1_vovv6")
-Button/styles/focus = SubResource("StyleBoxEmpty_jjrbp")
-Button/styles/hover = SubResource("StyleBoxFlat_e32it")
-Button/styles/normal = SubResource("StyleBoxFlat_d8rr0")
-Button/styles/pressed = SubResource("StyleBoxFlat_ghykn")
 
 [node name="PauseMenu" type="Control"]
 layout_mode = 3
@@ -112,7 +73,7 @@ offset_top = 115.0
 offset_right = 101.0
 grow_horizontal = 2
 grow_vertical = 2
-theme = SubResource("Theme_0nw8i")
+theme = ExtResource("3_cl5cf")
 theme_override_constants/separation = 15
 
 [node name="Resume" type="Button" parent="SideMenu/VBoxContainer"]
