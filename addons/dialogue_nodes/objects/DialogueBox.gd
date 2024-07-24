@@ -205,12 +205,14 @@ func _enter_tree():
 	variables = _dialogue_parser.variables
 	characters = _dialogue_parser.characters
 	
+	
 	_dialogue_parser.dialogue_started.connect(_on_dialogue_started)
 	_dialogue_parser.dialogue_processed.connect(_on_dialogue_processed)
 	_dialogue_parser.option_selected.connect(_on_option_selected)
 	_dialogue_parser.dialogue_signal.connect(_on_dialogue_signal)
 	_dialogue_parser.variable_changed.connect(_on_variable_changed)
 	_dialogue_parser.dialogue_ended.connect(_on_dialogue_ended)
+	
 
 
 func _ready():
@@ -310,6 +312,7 @@ func _on_dialogue_processed(speaker : Variant, dialogue : String, options : Arra
 	options_container.hide()
 	
 	dialogue_processed.emit(speaker, dialogue, options)
+
 
 
 func _on_option_selected(idx : int):

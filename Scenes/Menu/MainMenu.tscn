@@ -1,46 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://tdmgoapqegfh"]
+[gd_scene load_steps=5 format=3 uid="uid://tdmgoapqegfh"]
 
 [ext_resource type="Script" path="res://Scenes/Menu/MainMenu.gd" id="1_7rbbp"]
 [ext_resource type="FontFile" uid="uid://0frsxwr53hps" path="res://Themes/Fonts/Montserrat-Medium.ttf" id="1_g8w2u"]
 [ext_resource type="Texture2D" uid="uid://cfjaphq5qac3b" path="res://Textures/hd_8be18f226eee8433bdc9ef9369fbd2bd_669e80d12dd96.png" id="2_2edyg"]
+[ext_resource type="Theme" uid="uid://dwmw6lugevjxo" path="res://Themes/MenuButtonsDesign.tres" id="4_bh4ab"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e32it"]
-bg_color = Color(0.286702, 0.277336, 0.252072, 1)
-border_color = Color(0.8, 0.8, 0.8, 0)
-corner_radius_top_left = 20
-corner_radius_top_right = 20
-corner_radius_bottom_right = 20
-corner_radius_bottom_left = 20
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d8rr0"]
-bg_color = Color(0.976471, 0.976471, 0.878431, 1)
-corner_radius_top_left = 20
-corner_radius_top_right = 20
-corner_radius_bottom_right = 20
-corner_radius_bottom_left = 20
-shadow_color = Color(0, 0, 0, 0)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ghykn"]
-bg_color = Color(0, 0, 0, 1)
-border_color = Color(0.8, 0.8, 0.8, 0)
-corner_radius_top_left = 20
-corner_radius_top_right = 20
-corner_radius_bottom_right = 20
-corner_radius_bottom_left = 20
-
-[sub_resource type="Theme" id="Theme_eyq7o"]
-default_font = ExtResource("1_g8w2u")
-Button/colors/font_color = Color(0.40833, 0.408329, 0.408329, 1)
-Button/colors/font_focus_color = Color(0.407843, 0.407843, 0.407843, 1)
-Button/colors/font_pressed_color = Color(1, 1, 1, 1)
-Button/constants/h_separation = 4
-Button/constants/outline_size = 0
-Button/fonts/font = ExtResource("1_g8w2u")
-Button/styles/hover = SubResource("StyleBoxFlat_e32it")
-Button/styles/normal = SubResource("StyleBoxFlat_d8rr0")
-Button/styles/pressed = SubResource("StyleBoxFlat_ghykn")
-
-[node name="Control" type="Control"]
+[node name="MainMenu" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -138,7 +103,7 @@ offset_right = 244.0
 offset_bottom = 215.0
 grow_horizontal = 2
 grow_vertical = 2
-theme = SubResource("Theme_eyq7o")
+theme = ExtResource("4_bh4ab")
 theme_override_constants/separation = 15
 
 [node name="Play" type="Button" parent="Buttons/MainMenu/VBoxContainer"]
@@ -178,7 +143,7 @@ offset_right = 244.0
 offset_bottom = 215.0
 grow_horizontal = 2
 grow_vertical = 2
-theme = SubResource("Theme_eyq7o")
+theme = ExtResource("4_bh4ab")
 theme_override_constants/separation = 15
 
 [node name="CheckBox" type="CheckBox" parent="Buttons/Options/VBoxContainer"]
@@ -201,7 +166,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme = SubResource("Theme_eyq7o")
+theme = ExtResource("4_bh4ab")
 
 [node name="TextEdit" type="TextEdit" parent="SetName"]
 layout_mode = 1

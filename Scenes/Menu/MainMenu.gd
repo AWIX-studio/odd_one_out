@@ -52,9 +52,9 @@ func _on_check_box_toggled(toggled_on):
 	else:
 		ProjectSettings.set_setting("rendering/anti_aliasing/quality/msaa_2d", 0)
 
-func set_player_name(name:String):
+func set_player_name(player_name:String):
 	var Characters = preload("res://Dialogues/Characters/Characters.tres")
-	Characters.characters[0].name = name
+	Characters.characters[0].name = player_name
 	ResourceSaver.save(Characters)
 	var PlayerName = preload("res://Dialogues/chapter 0.tres")
 	PlayerName.variables['name']['value'] = Characters.characters[0].name

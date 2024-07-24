@@ -1,0 +1,42 @@
+[gd_resource type="Theme" load_steps=6 format=3 uid="uid://dwmw6lugevjxo"]
+
+[ext_resource type="FontFile" uid="uid://0frsxwr53hps" path="res://Themes/Fonts/Montserrat-Medium.ttf" id="1_7qwsb"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_x3s22"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e32it"]
+bg_color = Color(0.286702, 0.277336, 0.252072, 1)
+border_color = Color(0.8, 0.8, 0.8, 0)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d8rr0"]
+bg_color = Color(0.976471, 0.976471, 0.878431, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+shadow_color = Color(0, 0, 0, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ghykn"]
+bg_color = Color(0, 0, 0, 1)
+border_color = Color(0.8, 0.8, 0.8, 0)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[resource]
+default_font = ExtResource("1_7qwsb")
+Button/colors/font_color = Color(0.40833, 0.408329, 0.408329, 1)
+Button/colors/font_focus_color = Color(0.407843, 0.407843, 0.407843, 1)
+Button/colors/font_pressed_color = Color(1, 1, 1, 1)
+Button/constants/h_separation = 4
+Button/constants/outline_size = 0
+Button/fonts/font = ExtResource("1_7qwsb")
+Button/styles/focus = SubResource("StyleBoxEmpty_x3s22")
+Button/styles/hover = SubResource("StyleBoxFlat_e32it")
+Button/styles/normal = SubResource("StyleBoxFlat_d8rr0")
+Button/styles/pressed = SubResource("StyleBoxFlat_ghykn")
