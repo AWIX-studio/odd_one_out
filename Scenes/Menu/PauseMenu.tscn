@@ -9,7 +9,6 @@ bg_color = Color(1, 0.564706, 0.737255, 1)
 
 [sub_resource type="Theme" id="Theme_tnuvi"]
 default_font = ExtResource("1_vovv6")
-default_font_size = 30
 Label/colors/font_shadow_color = Color(0, 0, 0, 0.172549)
 Label/constants/shadow_offset_x = 2
 Label/constants/shadow_offset_y = 2
@@ -54,11 +53,12 @@ layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -98.5
-offset_top = 20.0
-offset_right = 98.5
-offset_bottom = 58.0
+offset_left = -132.0
+offset_top = 30.0
+offset_right = 132.0
+offset_bottom = 80.0
 grow_horizontal = 2
+theme_override_font_sizes/font_size = 40
 text = "Меню паузы"
 horizontal_alignment = 1
 
@@ -68,9 +68,9 @@ anchors_preset = 13
 anchor_left = 0.5
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -100.0
+offset_left = -136.0
 offset_top = 115.0
-offset_right = 101.0
+offset_right = 137.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("3_cl5cf")

@@ -19,7 +19,7 @@ func _input(event):
 		
 		var new_buttons_pos_x = $Buttons.position[0] + (-get_viewport().size[0]/2 + -event.position[0])
 		var new_buttons_pos_y = $Buttons.position[1] + (-get_viewport().size[1]/2 + -event.position[1])
-		set_buttons_menu_position(new_buttons_pos_x/40 + 50, new_buttons_pos_y/40 + 260)
+		set_buttons_menu_position(new_buttons_pos_x/40 + 70, new_buttons_pos_y/40 + 260)
 
 
 func _on_play_pressed():
@@ -60,3 +60,11 @@ func set_player_name(player_name:String):
 	PlayerName.variables['name']['value'] = Characters.characters[0].name
 	ResourceSaver.save(PlayerName)
 	
+
+
+func _on_github_pressed():
+	OS.shell_open('https://github.com/AWIX-studio/odd_one_out')
+
+
+func _on_discord_pressed():
+	OS.shell_open('https://discord.gg/j9SpvCuj58')

@@ -19,6 +19,7 @@ config/icon="res://Textures/Icon.jpg"
 [display]
 
 window/size/resizable=false
+window/stretch/mode="canvas_items"
 
 [editor_plugins]
 

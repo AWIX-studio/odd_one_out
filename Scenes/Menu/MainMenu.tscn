@@ -1,9 +1,16 @@
-[gd_scene load_steps=5 format=3 uid="uid://tdmgoapqegfh"]
+[gd_scene load_steps=9 format=3 uid="uid://tdmgoapqegfh"]
 
 [ext_resource type="Script" path="res://Scenes/Menu/MainMenu.gd" id="1_7rbbp"]
 [ext_resource type="FontFile" uid="uid://0frsxwr53hps" path="res://Themes/Fonts/Montserrat-Medium.ttf" id="1_g8w2u"]
 [ext_resource type="Texture2D" uid="uid://cfjaphq5qac3b" path="res://Textures/hd_8be18f226eee8433bdc9ef9369fbd2bd_669e80d12dd96.png" id="2_2edyg"]
 [ext_resource type="Theme" uid="uid://dwmw6lugevjxo" path="res://Themes/MenuButtonsDesign.tres" id="4_bh4ab"]
+[ext_resource type="Texture2D" uid="uid://bigc0ju4tau64" path="res://Textures/Logos/Github.png" id="4_gidpq"]
+[ext_resource type="Texture2D" uid="uid://ptxvsui1sgim" path="res://Textures/Logos/pngwing.com (1).png" id="5_2qgt5"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lrk6a"]
+
+[sub_resource type="Theme" id="Theme_dywgb"]
+Button/styles/focus = SubResource("StyleBoxEmpty_lrk6a")
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -78,11 +85,40 @@ theme_override_font_sizes/font_size = 61
 text = "Выбери лишнее!"
 horizontal_alignment = 1
 
+[node name="HBoxContainer" type="HBoxContainer" parent="FG"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -252.0
+offset_top = -108.0
+offset_right = 938.0
+offset_bottom = 412.0
+grow_horizontal = 0
+grow_vertical = 0
+scale = Vector2(0.15, 0.15)
+theme = SubResource("Theme_dywgb")
+theme_override_constants/separation = 150
+
+[node name="Github" type="Button" parent="FG/HBoxContainer"]
+layout_mode = 2
+icon = ExtResource("4_gidpq")
+flat = true
+icon_alignment = 1
+
+[node name="Discord" type="Button" parent="FG/HBoxContainer"]
+layout_mode = 2
+icon = ExtResource("5_2qgt5")
+flat = true
+icon_alignment = 1
+
 [node name="Buttons" type="Control" parent="."]
 anchors_preset = 0
-offset_left = 55.0
+offset_left = 30.0
 offset_top = 244.0
-offset_right = 323.0
+offset_right = 298.0
 offset_bottom = 570.0
 
 [node name="MainMenu" type="Control" parent="Buttons"]
@@ -202,6 +238,8 @@ theme_override_fonts/font = ExtResource("1_g8w2u")
 theme_override_font_sizes/font_size = 30
 text = "Новая игра!"
 
+[connection signal="pressed" from="FG/HBoxContainer/Github" to="." method="_on_github_pressed"]
+[connection signal="pressed" from="FG/HBoxContainer/Discord" to="." method="_on_discord_pressed"]
 [connection signal="pressed" from="Buttons/MainMenu/VBoxContainer/Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="Buttons/MainMenu/VBoxContainer/Options" to="." method="_on_options_pressed"]
 [connection signal="pressed" from="Buttons/MainMenu/VBoxContainer/Quit" to="." method="_on_quit_pressed"]
