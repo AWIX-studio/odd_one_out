@@ -59,4 +59,4 @@ func set_player_name(name:String):
 	var PlayerName = preload("res://Dialogues/chapter 0.tres")
 	PlayerName.variables['name']['value'] = Characters.characters[0].name
 	ResourceSaver.save(PlayerName)
-	pass
+	
