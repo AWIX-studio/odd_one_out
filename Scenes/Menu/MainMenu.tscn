@@ -182,11 +182,15 @@ grow_vertical = 2
 theme = ExtResource("4_bh4ab")
 theme_override_constants/separation = 15
 
-[node name="CheckBox" type="CheckBox" parent="Buttons/Options/VBoxContainer"]
+[node name="FullScreen" type="CheckBox" parent="Buttons/Options/VBoxContainer"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("1_g8w2u")
 theme_override_font_sizes/font_size = 30
-text = "Сглаживание"
+text = "На весь экран"
+
+[node name="OptionButton" type="OptionButton" parent="Buttons/Options/VBoxContainer"]
+layout_mode = 2
+alignment = 1
 
 [node name="Back" type="Button" parent="Buttons/Options/VBoxContainer"]
 layout_mode = 2
@@ -243,6 +247,6 @@ text = "Новая игра!"
 [connection signal="pressed" from="Buttons/MainMenu/VBoxContainer/Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="Buttons/MainMenu/VBoxContainer/Options" to="." method="_on_options_pressed"]
 [connection signal="pressed" from="Buttons/MainMenu/VBoxContainer/Quit" to="." method="_on_quit_pressed"]
-[connection signal="toggled" from="Buttons/Options/VBoxContainer/CheckBox" to="." method="_on_check_box_toggled"]
+[connection signal="toggled" from="Buttons/Options/VBoxContainer/FullScreen" to="." method="_on_full_screen_toggled"]
 [connection signal="pressed" from="Buttons/Options/VBoxContainer/Back" to="." method="_on_back_pressed"]
 [connection signal="pressed" from="SetName/NewGame" to="." method="_on_new_game_pressed"]
