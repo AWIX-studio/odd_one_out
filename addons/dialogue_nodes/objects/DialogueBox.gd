@@ -59,6 +59,7 @@ signal dialogue_ended
 @export var scroll_speed := 4
 ## Input action used to skip dialogue animation
 @export var skip_input_action := 'ui_cancel'
+@export var next_input_action := 'ui_menu'
 ## Custom RichTextEffects that can be used in the dialogue as bbcodes.[br]
 ## Example: [code][ghost]Spooky dialogue![/ghost][/code]
 @export var custom_effects : Array[RichTextEffect] = [
@@ -240,10 +241,20 @@ func _process(delta):
 
 
 func _input(event):
-	if is_running() and Input.is_action_just_pressed(skip_input_action):
+
+	if is_running() and Input.is_action_just_pressed(skip_input_action) and not options_container.visible:
 		if _wait_effect:
 			_wait_effect.skip = true
 		_on_wait_finished()
+	
+	elif is_running() and Input.is_action_just_pressed(skip_input_action) and options_container.visible:
+		var options_count = 0
+		for i in options_container.get_children():
+			if options_container.get_child(i.get_index()).visible:
+				options_count += 1
+			else: pass
+		if options_count == 1:
+			_dialogue_parser.select_option(0)
 
 
 ## Starts processing the dialogue [member data], starting with the Start Node with its ID set to [param start_id].

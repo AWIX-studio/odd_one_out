@@ -87,4 +87,4 @@ func _on_full_screen_toggled(toggled_on):
 		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
 
 func add_resolution_options():
-	var current_resolution = get_viewport()
+	var _current_resolution = get_viewport()

@@ -64,6 +64,7 @@ script = ExtResource("4_finaf")
 data = ExtResource("5_csd64")
 hide_portrait = true
 skip_input_action = "skip"
+next_input_action = null
 custom_effects = Array[RichTextEffect]([SubResource("RichTextEffect_euf8c"), SubResource("RichTextEffect_exmgv"), SubResource("RichTextEffect_q18at")])
 
 [node name="Button" type="Button" parent="."]
