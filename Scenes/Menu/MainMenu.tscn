@@ -148,6 +148,12 @@ theme_override_fonts/font = ExtResource("1_g8w2u")
 theme_override_font_sizes/font_size = 30
 text = "Новая игра!"
 
+[node name="Load" type="Button" parent="Buttons/MainMenu/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_g8w2u")
+theme_override_font_sizes/font_size = 30
+text = "Загрузить"
+
 [node name="Options" type="Button" parent="Buttons/MainMenu/VBoxContainer"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("1_g8w2u")
@@ -245,6 +251,7 @@ text = "Новая игра!"
 [connection signal="pressed" from="FG/HBoxContainer/Github" to="." method="_on_github_pressed"]
 [connection signal="pressed" from="FG/HBoxContainer/Discord" to="." method="_on_discord_pressed"]
 [connection signal="pressed" from="Buttons/MainMenu/VBoxContainer/Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="Buttons/MainMenu/VBoxContainer/Load" to="." method="_on_load_pressed"]
 [connection signal="pressed" from="Buttons/MainMenu/VBoxContainer/Options" to="." method="_on_options_pressed"]
 [connection signal="pressed" from="Buttons/MainMenu/VBoxContainer/Quit" to="." method="_on_quit_pressed"]
 [connection signal="toggled" from="Buttons/Options/VBoxContainer/FullScreen" to="." method="_on_full_screen_toggled"]

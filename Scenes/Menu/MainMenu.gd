@@ -15,6 +15,7 @@ var resolutions: Dictionary = {
 	'800x600':Vector2(800, 600)
 }
 
+
 func set_fg_position(x, y):
 	$FG.position.x = x
 	$FG.position.y = y
@@ -55,6 +56,7 @@ func _on_back_pressed():
 	$Buttons/MainMenu.visible = true
 	$Buttons/Options.visible = false
 
+
 func _on_new_game_pressed():
 	if $SetName/TextEdit.text != "":
 		set_player_name($SetName/TextEdit.text)
@@ -69,7 +71,6 @@ func set_player_name(player_name:String):
 	var PlayerName = preload("res://Dialogues/chapter 0.tres")
 	PlayerName.variables['name']['value'] = Characters.characters[0].name
 	ResourceSaver.save(PlayerName)
-	
 
 
 func _on_github_pressed():
@@ -86,5 +87,10 @@ func _on_full_screen_toggled(toggled_on):
 	else:
 		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
 
+
 func add_resolution_options():
 	var _current_resolution = get_viewport()
+
+
+func _on_load_pressed():
+	pass
