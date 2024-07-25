@@ -28,12 +28,12 @@ Game about...
   Team
 </h2>
 
-1. @Av10n
+1. [AWEDoo](https://github.com/Av10n)
     - Coder :keyboard:
     - Designer :sparkles:
     - Tester :video_game:
     - Task manager :clipboard:
-2. @Herowhither
+2. [Herowhither](https://github.com/Herowhither)
     - Musician :musical_note:
     - AI artist :art:
     - Designer :sparkles:
