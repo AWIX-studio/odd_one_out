@@ -2,9 +2,9 @@ extends Control
 
 # Options variables
 
-
 @onready var resolution_option_button = $Buttons/Options/VBoxContainer/OptionButton
-var resolutions: Dictionary = {
+@onready var fullscreen_checkbox = $Buttons/Options/VBoxContainer/FullScreen
+@onready var resolutions: Dictionary = {
 	'1920x1080':Vector2(1920, 1080),
 	'1600x900':Vector2(1600, 900),
 	'1440x900':Vector2(1440, 900),
@@ -15,6 +15,8 @@ var resolutions: Dictionary = {
 	'800x600':Vector2(800, 600)
 }
 
+func _ready():
+	add_resolution_options()
 
 func set_fg_position(x, y):
 	$FG.position.x = x
@@ -83,14 +85,23 @@ func _on_discord_pressed():
 
 func _on_full_screen_toggled(toggled_on):
 	if toggled_on:
-		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_EXCLUSIVE_FULLSCREEN)
+		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
 	else:
 		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
 
 
 func add_resolution_options():
-	var _current_resolution = get_viewport()
-
+	var current_resolution = get_viewport()
+	var resolution_option_button_id = 0
+	for i in resolutions:
+		resolution_option_button.add_item(i, resolution_option_button_id)
+		resolution_option_button_id += 1
+		
+func _on_option_button_item_selected(index):
+	DisplayServer.window_set_size(resolutions.get(resolution_option_button.get_item_text(index)))
 
 func _on_load_pressed():
 	pass
+
+
+

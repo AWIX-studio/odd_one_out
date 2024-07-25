@@ -255,5 +255,6 @@ text = "Новая игра!"
 [connection signal="pressed" from="Buttons/MainMenu/VBoxContainer/Options" to="." method="_on_options_pressed"]
 [connection signal="pressed" from="Buttons/MainMenu/VBoxContainer/Quit" to="." method="_on_quit_pressed"]
 [connection signal="toggled" from="Buttons/Options/VBoxContainer/FullScreen" to="." method="_on_full_screen_toggled"]
+[connection signal="item_selected" from="Buttons/Options/VBoxContainer/OptionButton" to="." method="_on_option_button_item_selected"]
 [connection signal="pressed" from="Buttons/Options/VBoxContainer/Back" to="." method="_on_back_pressed"]
 [connection signal="pressed" from="SetName/NewGame" to="." method="_on_new_game_pressed"]
