@@ -92,7 +92,7 @@ func _on_full_screen_toggled(toggled_on):
 
 
 func add_resolution_options():
-	var current_resolution = get_viewport()
+	var _current_resolution = get_viewport()
 	var resolution_option_button_id = 0
 	for i in resolutions:
 		resolution_option_button.add_item(i, resolution_option_button_id)
