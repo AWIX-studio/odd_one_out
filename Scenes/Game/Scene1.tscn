@@ -1,10 +1,10 @@
-[gd_scene load_steps=18 format=3 uid="uid://p0lr0t70vhvp"]
+[gd_scene load_steps=13 format=3 uid="uid://p0lr0t70vhvp"]
 
 [ext_resource type="Script" path="res://Scenes/Game/Scene1.gd" id="1_gw203"]
 [ext_resource type="Theme" uid="uid://cbf7j8no5y0jt" path="res://Themes/Test SAcene.tres" id="2_tdb6j"]
 [ext_resource type="StyleBox" uid="uid://1fji6e7tyj68" path="res://Themes/Test SAcene BG.tres" id="3_f158i"]
 [ext_resource type="Script" path="res://addons/dialogue_nodes/objects/DialogueBox.gd" id="4_finaf"]
-[ext_resource type="Resource" uid="uid://dqrowxb5g8kcd" path="res://Dialogues/chapter 0.tres" id="5_csd64"]
+[ext_resource type="Resource" uid="uid://dloliaj1r02mf" path="res://Dialogues/chapter 0.tres" id="5_csd64"]
 [ext_resource type="Script" path="res://addons/dialogue_nodes/objects/bbcodeWait.gd" id="6_qlwic"]
 [ext_resource type="Script" path="res://addons/dialogue_nodes/objects/bbcodeGhost.gd" id="7_jbnk1"]
 [ext_resource type="Script" path="res://addons/dialogue_nodes/objects/bbcodeMatrix.gd" id="8_mvk85"]
@@ -18,21 +18,6 @@ script = ExtResource("7_jbnk1")
 
 [sub_resource type="RichTextEffect" id="RichTextEffect_q18at"]
 script = ExtResource("8_mvk85")
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_r14pt"]
-bg_color = Color(0.6, 0.6, 0.6, 0)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nd7o8"]
-bg_color = Color(0.6, 0.6, 0.6, 0)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tjqrl"]
-bg_color = Color(0.6, 0.6, 0.6, 0)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7wyu7"]
-bg_color = Color(0.6, 0.6, 0.6, 0)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v1ain"]
-bg_color = Color(0.6, 0.6, 0.6, 0)
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -66,21 +51,13 @@ hide_portrait = true
 skip_input_action = "skip"
 custom_effects = Array[RichTextEffect]([SubResource("RichTextEffect_euf8c"), SubResource("RichTextEffect_exmgv"), SubResource("RichTextEffect_q18at")])
 
-[node name="Button" type="Button" parent="."]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_styles/normal = SubResource("StyleBoxFlat_r14pt")
-theme_override_styles/hover = SubResource("StyleBoxFlat_nd7o8")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_tjqrl")
-theme_override_styles/disabled = SubResource("StyleBoxFlat_7wyu7")
-theme_override_styles/focus = SubResource("StyleBoxFlat_v1ain")
-
 [node name="PauseMenu" parent="." instance=ExtResource("9_fvdnj")]
+visible = false
 layout_mode = 1
+
+[node name="Timer" type="Timer" parent="."]
+process_callback = 0
+one_shot = true
 
 [connection signal="dialogue_ended" from="DialogueBox" to="." method="_on_dialogue_box_dialogue_ended"]
-[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

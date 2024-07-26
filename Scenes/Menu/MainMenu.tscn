@@ -22,11 +22,12 @@ grow_vertical = 2
 script = ExtResource("1_7rbbp")
 
 [node name="BG" type="ColorRect" parent="."]
-layout_mode = 0
-offset_left = -42.0
-offset_top = -24.0
-offset_right = 1176.0
-offset_bottom = 688.0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 color = Color(1, 0.752941, 0.85098, 1)
 
 [node name="FG2" type="Control" parent="."]

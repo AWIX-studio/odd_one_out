@@ -18,6 +18,7 @@ extends Control
 func _ready():
 	add_resolution_options()
 
+
 func set_fg_position(x, y):
 	$FG.position.x = x
 	$FG.position.y = y
@@ -96,12 +97,10 @@ func add_resolution_options():
 	for i in resolutions:
 		resolution_option_button.add_item(i, resolution_option_button_id)
 		resolution_option_button_id += 1
-		
+
 func _on_option_button_item_selected(index):
 	DisplayServer.window_set_size(resolutions.get(resolution_option_button.get_item_text(index)))
 
 func _on_load_pressed():
 	pass
-
-
 

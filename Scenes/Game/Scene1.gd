@@ -1,22 +1,15 @@
 extends Control
 
 var screen_button
-var click_count = 0
+var click_count = 1
 
 func _ready():
-	screen_button = $Button
-
-func _on_button_pressed():
-	if click_count == 0:
-		remove_child(screen_button)
-		$DialogueBox.start("START")
-	elif click_count == 1:
-		remove_child(screen_button)
-		$DialogueBox.start("START2")
-	
-	click_count += 1
-
+	$DialogueBox.start('START' + str(click_count))
 
 func _on_dialogue_box_dialogue_ended():
-	add_child(screen_button)
-	
+	click_count += 1
+	$Timer.start(1)
+
+
+func _on_timer_timeout():
+	$DialogueBox.start('START' + str(click_count))

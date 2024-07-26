@@ -4,9 +4,9 @@
 [ext_resource type="Script" path="res://addons/dialogue_nodes/objects/CharacterList.gd" id="2_tdrix"]
 
 [sub_resource type="Resource" id="Resource_0ilsg"]
-resource_name = "{{name}}"
+resource_name = "гг"
 script = ExtResource("1_mgf42")
-name = "y"
+name = "авед"
 color = Color(0.817802, 0.817802, 0.814794, 1)
 
 [sub_resource type="Resource" id="Resource_fcafs"]
