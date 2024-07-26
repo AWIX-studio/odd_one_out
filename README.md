@@ -20,7 +20,7 @@ At the **initial stage**
   Game plot
 </h2>
 
-Game about...
+The main character meets girls, but deep down he considers himself superfluous. He has bad dreams and is haunted by bad thoughts, leading to anxiety, while he tries to have fun with 4 girls. As a result, the player chooses one of the 4 girls, or chooses alternative paths to the plot.
 
 ---
 
