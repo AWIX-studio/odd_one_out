@@ -1,12 +1,12 @@
-[gd_resource type="Resource" script_class="CharacterList" load_steps=8 format=3 uid="uid://7we282bw05p3"]
+[gd_resource type="Resource" script_class="CharacterList" load_steps=9 format=3 uid="uid://bfkmpasabt8gg"]
 
 [ext_resource type="Script" path="res://addons/dialogue_nodes/objects/Character.gd" id="1_mgf42"]
 [ext_resource type="Script" path="res://addons/dialogue_nodes/objects/CharacterList.gd" id="2_tdrix"]
 
 [sub_resource type="Resource" id="Resource_0ilsg"]
-resource_name = "гг"
+resource_name = "{{name}}"
 script = ExtResource("1_mgf42")
-name = "авед"
+name = "y"
 color = Color(0.817802, 0.817802, 0.814794, 1)
 
 [sub_resource type="Resource" id="Resource_fcafs"]
@@ -33,6 +33,12 @@ script = ExtResource("1_mgf42")
 name = "Изуми"
 color = Color(1, 0.714234, 0.776208, 1)
 
+[sub_resource type="Resource" id="Resource_urw52"]
+resource_name = "???"
+script = ExtResource("1_mgf42")
+name = "???"
+color = Color(0, 0, 0, 1)
+
 [resource]
 script = ExtResource("2_tdrix")
-characters = Array[ExtResource("1_mgf42")]([SubResource("Resource_0ilsg"), SubResource("Resource_fcafs"), SubResource("Resource_mkd8u"), SubResource("Resource_mwnwc"), SubResource("Resource_61v6p")])
+characters = Array[ExtResource("1_mgf42")]([SubResource("Resource_0ilsg"), SubResource("Resource_fcafs"), SubResource("Resource_mkd8u"), SubResource("Resource_mwnwc"), SubResource("Resource_61v6p"), SubResource("Resource_urw52")])
