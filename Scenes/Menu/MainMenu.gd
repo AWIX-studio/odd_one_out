@@ -1,7 +1,6 @@
 extends Control
 
 # Options variables
-
 @onready var resolution_option_button = $Buttons/Options/VBoxContainer/OptionButton
 @onready var fullscreen_checkbox = $Buttons/Options/VBoxContainer/FullScreen
 @onready var resolutions: Dictionary = {
@@ -14,6 +13,8 @@ extends Control
 	'1024x600':Vector2(1024, 600),
 	'800x600':Vector2(800, 600)
 }
+
+var saveLoad = SaveLoad.new()
 
 func _ready():
 	add_resolution_options()
@@ -45,8 +46,15 @@ func _on_play_pressed():
 	$Buttons/MainMenu.visible = false
 	$SetName.visible = true
 
+func _on_new_game_pressed():
+	if $SetName/TextEdit.text != "":
+		set_player_name($SetName/TextEdit.text)
+		get_tree().change_scene_to_file('res://Scenes/Game/Scene1.tscn')
+	else: pass
+
 
 func _on_quit_pressed():
+	saveLoad.save_game()
 	get_tree().quit()
 
 
@@ -58,13 +66,7 @@ func _on_options_pressed():
 func _on_back_pressed():
 	$Buttons/MainMenu.visible = true
 	$Buttons/Options.visible = false
-
-
-func _on_new_game_pressed():
-	if $SetName/TextEdit.text != "":
-		set_player_name($SetName/TextEdit.text)
-		get_tree().change_scene_to_file('res://Scenes/Game/Scene1.tscn')
-	else: pass
+	saveLoad.save_game()
 
 
 func set_player_name(player_name:String):
@@ -84,13 +86,6 @@ func _on_discord_pressed():
 	OS.shell_open('https://discord.gg/j9SpvCuj58')
 
 
-func _on_full_screen_toggled(toggled_on):
-	if toggled_on:
-		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
-	else:
-		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
-
-
 func add_resolution_options():
 	var _current_resolution = get_viewport()
 	var resolution_option_button_id = 0
@@ -98,9 +93,18 @@ func add_resolution_options():
 		resolution_option_button.add_item(i, resolution_option_button_id)
 		resolution_option_button_id += 1
 
+
+func _on_full_screen_toggled(toggled_on):
+	if toggled_on:
+		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
+	else:
+		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
+
+
 func _on_option_button_item_selected(index):
 	DisplayServer.window_set_size(resolutions.get(resolution_option_button.get_item_text(index)))
 
+
 func _on_load_pressed():
-	pass
+	saveLoad.load_game()
 
