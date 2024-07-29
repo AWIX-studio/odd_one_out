@@ -18,13 +18,13 @@ func pause_show():
 	show()
 	$AnimationPlayer.play("appearance of a pause")
 	is_animation_playing = true
-	$Timer.start(0.8)
+	$Timer.start(0.5)
 
 func pause_hide():
 	is_paused = false
 	$AnimationPlayer.play("disappearance of pause")
 	is_animation_playing = true
-	$Timer.start(0.8)
+	$Timer.start(0.5)
 
 func _on_timer_timeout():
 	if not is_paused:

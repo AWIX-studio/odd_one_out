@@ -1,8 +1,9 @@
-[gd_scene load_steps=9 format=3 uid="uid://dhcex8jyifhts"]
+[gd_scene load_steps=12 format=3 uid="uid://dhcex8jyifhts"]
 
 [ext_resource type="FontFile" uid="uid://0frsxwr53hps" path="res://Themes/Fonts/Montserrat-Medium.ttf" id="1_vovv6"]
 [ext_resource type="Script" path="res://Scenes/Menu/PauseMenu.gd" id="2_aj3oq"]
 [ext_resource type="Theme" uid="uid://dwmw6lugevjxo" path="res://Themes/MenuButtonsDesign.tres" id="3_cl5cf"]
+[ext_resource type="Shader" path="res://Shaders/PauseBlur.gdshader" id="3_rmjwd"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_eds72"]
 bg_color = Color(1, 0.564706, 0.737255, 1)
@@ -14,6 +15,10 @@ Label/constants/shadow_offset_x = 2
 Label/constants/shadow_offset_y = 2
 Panel/styles/panel = SubResource("StyleBoxFlat_eds72")
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ugidu"]
+shader = ExtResource("3_rmjwd")
+shader_parameter/lod = 2.141
+
 [sub_resource type="Animation" id="Animation_f5pk5"]
 resource_name = "appearance of a pause"
 tracks/0/type = "value"
@@ -23,7 +28,7 @@ tracks/0/path = NodePath("SideMenu:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.8),
+"times": PackedFloat32Array(0, 0.5),
 "transitions": PackedFloat32Array(0.277392, 1),
 "update": 0,
 "values": [Vector2(-300, 0), Vector2(0, 0)]
@@ -31,17 +36,56 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("ColorRect:color")
+tracks/1/path = NodePath("ColorRect:material:shader_parameter/lod")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.8),
-"transitions": PackedFloat32Array(0.378929, 1),
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(0.210224, 1),
 "update": 0,
-"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 0.584314)]
+"values": [0.0, 2.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("ColorRect2:color")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(0.225313, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 0.392157)]
 }
 
-[sub_resource type="Animation" id="Animation_h7gmp"]
+[sub_resource type="Animation" id="Animation_n6f57"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:material:shader_parameter/lod")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [2.141]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ColorRect2:color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 0.576471)]
+}
+
+[sub_resource type="Animation" id="Animation_gpcyf"]
 resource_name = "disappearance of pause"
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -50,7 +94,7 @@ tracks/0/path = NodePath("SideMenu:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.8),
+"times": PackedFloat32Array(0, 0.5),
 "transitions": PackedFloat32Array(0.277392, 1),
 "update": 0,
 "values": [Vector2(0, 0), Vector2(-300, 0)]
@@ -58,20 +102,33 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("ColorRect:color")
+tracks/1/path = NodePath("ColorRect:material:shader_parameter/lod")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.8),
-"transitions": PackedFloat32Array(0.378929, 1),
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(0.210224, 1),
 "update": 0,
-"values": [Color(0, 0, 0, 0.584314), Color(0, 0, 0, 0)]
+"values": [2.0, 0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("ColorRect2:color")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(0.225313, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0.392157), Color(0, 0, 0, 0)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_bfsu6"]
 _data = {
+"RESET": SubResource("Animation_n6f57"),
 "appearance of a pause": SubResource("Animation_f5pk5"),
-"disappearance of pause": SubResource("Animation_h7gmp")
+"disappearance of pause": SubResource("Animation_gpcyf")
 }
 
 [node name="PauseMenu" type="Control"]
@@ -85,6 +142,7 @@ theme = SubResource("Theme_tnuvi")
 script = ExtResource("2_aj3oq")
 
 [node name="ColorRect" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_ugidu")
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -93,11 +151,22 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 0.584314)
 
+[node name="ColorRect2" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.576471)
+
 [node name="SideMenu" type="Control" parent="."]
 layout_mode = 1
 anchors_preset = 9
 anchor_bottom = 1.0
-offset_right = 300.0
+offset_left = -8.73981
+offset_right = 291.26
+offset_bottom = 648.0
 grow_vertical = 2
 
 [node name="Panel" type="Panel" parent="SideMenu"]
