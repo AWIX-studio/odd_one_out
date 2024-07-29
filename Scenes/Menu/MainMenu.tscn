@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://tdmgoapqegfh"]
+[gd_scene load_steps=10 format=3 uid="uid://tdmgoapqegfh"]
 
 [ext_resource type="Script" path="res://Scenes/Menu/MainMenu.gd" id="1_7rbbp"]
 [ext_resource type="FontFile" uid="uid://0frsxwr53hps" path="res://Themes/Fonts/Montserrat-Medium.ttf" id="1_g8w2u"]
@@ -6,6 +6,7 @@
 [ext_resource type="Theme" uid="uid://dwmw6lugevjxo" path="res://Themes/MenuButtonsDesign.tres" id="4_bh4ab"]
 [ext_resource type="Texture2D" uid="uid://bigc0ju4tau64" path="res://Textures/Logos/Github.png" id="4_gidpq"]
 [ext_resource type="Texture2D" uid="uid://ptxvsui1sgim" path="res://Textures/Logos/pngwing.com (1).png" id="5_2qgt5"]
+[ext_resource type="Script" path="res://Scripts/SaveMainMenu.gd" id="7_p36ge"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lrk6a"]
 
@@ -191,12 +192,14 @@ theme = ExtResource("4_bh4ab")
 theme_override_constants/separation = 15
 
 [node name="FullScreen" type="CheckBox" parent="Buttons/Options/VBoxContainer"]
+unique_name_in_owner = true
 layout_mode = 2
 theme_override_fonts/font = ExtResource("1_g8w2u")
 theme_override_font_sizes/font_size = 30
 text = "На весь экран"
 
 [node name="OptionButton" type="OptionButton" parent="Buttons/Options/VBoxContainer"]
+unique_name_in_owner = true
 layout_mode = 2
 alignment = 1
 
@@ -249,6 +252,11 @@ grow_vertical = 2
 theme_override_fonts/font = ExtResource("1_g8w2u")
 theme_override_font_sizes/font_size = 30
 text = "Новая игра!"
+
+[node name="Utilities" type="Node" parent="."]
+
+[node name="SaveLoad" type="Node" parent="Utilities"]
+script = ExtResource("7_p36ge")
 
 [connection signal="pressed" from="FG/HBoxContainer/Github" to="." method="_on_github_pressed"]
 [connection signal="pressed" from="FG/HBoxContainer/Discord" to="." method="_on_discord_pressed"]

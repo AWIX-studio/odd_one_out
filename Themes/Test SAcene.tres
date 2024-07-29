@@ -1,6 +1,38 @@
-[gd_resource type="Theme" load_steps=4 format=3 uid="uid://cbf7j8no5y0jt"]
+[gd_resource type="Theme" load_steps=8 format=3 uid="uid://cbf7j8no5y0jt"]
 
 [ext_resource type="FontFile" uid="uid://0frsxwr53hps" path="res://Themes/Fonts/Montserrat-Medium.ttf" id="2_d13vg"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gt0s1"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dopi3"]
+bg_color = Color(0.286702, 0.277336, 0.252072, 1)
+border_width_bottom = 3
+border_color = Color(0.18359, 0.18359, 0.18359, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+expand_margin_bottom = 3.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_goqyy"]
+content_margin_left = 10.0
+content_margin_right = 10.0
+bg_color = Color(0.976471, 0.976471, 0.878431, 1)
+border_width_bottom = 3
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+expand_margin_bottom = 3.0
+shadow_color = Color(0, 0, 0, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1p27u"]
+bg_color = Color(0, 0, 0, 1)
+border_color = Color(0.8, 0.8, 0.8, 0)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lgtau"]
 content_margin_left = 10.0
@@ -11,6 +43,12 @@ content_margin_top = 20.0
 
 [resource]
 default_font = ExtResource("2_d13vg")
+Button/colors/font_color = Color(0.407843, 0.407843, 0.407843, 1)
+Button/colors/font_focus_color = Color(0.407843, 0.407843, 0.407843, 1)
+Button/styles/focus = SubResource("StyleBoxEmpty_gt0s1")
+Button/styles/hover = SubResource("StyleBoxFlat_dopi3")
+Button/styles/normal = SubResource("StyleBoxFlat_goqyy")
+Button/styles/pressed = SubResource("StyleBoxFlat_1p27u")
 Label/colors/font_outline_color = Color(0, 0, 0, 1)
 Label/constants/outline_size = 3
 Label/font_sizes/font_size = 26
