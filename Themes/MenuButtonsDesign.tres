@@ -1,4 +1,4 @@
-[gd_resource type="Theme" load_steps=6 format=3 uid="uid://dwmw6lugevjxo"]
+[gd_resource type="Theme" load_steps=7 format=3 uid="uid://dwmw6lugevjxo"]
 
 [ext_resource type="FontFile" uid="uid://0frsxwr53hps" path="res://Themes/Fonts/Montserrat-Medium.ttf" id="1_7qwsb"]
 
@@ -32,6 +32,16 @@ corner_radius_top_right = 20
 corner_radius_bottom_right = 20
 corner_radius_bottom_left = 20
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uc15h"]
+content_margin_left = 10.0
+bg_color = Color(0.580392, 0.384314, 0.466667, 0.705882)
+border_color = Color(0.223103, 0.223103, 0.223103, 1)
+corner_radius_top_left = 7
+corner_radius_top_right = 7
+corner_radius_bottom_right = 7
+corner_radius_bottom_left = 7
+shadow_color = Color(0, 0, 0, 0)
+
 [resource]
 default_font = ExtResource("1_7qwsb")
 Button/colors/font_color = Color(0.40833, 0.408329, 0.408329, 1)
@@ -45,3 +55,4 @@ Button/styles/focus = SubResource("StyleBoxEmpty_x3s22")
 Button/styles/hover = SubResource("StyleBoxFlat_e32it")
 Button/styles/normal = SubResource("StyleBoxFlat_d8rr0")
 Button/styles/pressed = SubResource("StyleBoxFlat_ghykn")
+TextEdit/styles/normal = SubResource("StyleBoxFlat_uc15h")
