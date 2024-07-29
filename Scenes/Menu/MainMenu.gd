@@ -14,10 +14,18 @@ extends Control
 	'800x600':Vector2(800, 600)
 }
 
-var saveLoad = SaveLoad.new()
+#from SaveMainMenu.gd
+@onready var full_screen = %FullScreen
+@onready var option_button = %OptionButton
+
+
+var SAVE_GAME_PATH : String = 'user://savegame.json'
+var options_dict : Dictionary
+
 
 func _ready():
 	add_resolution_options()
+	load_game()
 
 
 func set_fg_position(x, y):
@@ -29,6 +37,7 @@ func set_fg2_position(x, y):
 func set_buttons_menu_position(x, y):
 	$Buttons.position.x = x
 	$Buttons.position.y = y
+
 
 func _input(event):
 	if event is InputEventMouseMotion:
@@ -48,13 +57,14 @@ func _on_play_pressed():
 
 func _on_new_game_pressed():
 	if $SetName/TextEdit.text != "":
+		save_game()
 		set_player_name($SetName/TextEdit.text)
 		get_tree().change_scene_to_file('res://Scenes/Game/Scene1.tscn')
 	else: pass
 
 
 func _on_quit_pressed():
-	saveLoad.save_game()
+	save_game()
 	get_tree().quit()
 
 
@@ -66,7 +76,7 @@ func _on_options_pressed():
 func _on_back_pressed():
 	$Buttons/MainMenu.visible = true
 	$Buttons/Options.visible = false
-	saveLoad.save_game()
+	save_game()
 
 
 func set_player_name(player_name:String):
@@ -92,19 +102,51 @@ func add_resolution_options():
 	for i in resolutions:
 		resolution_option_button.add_item(i, resolution_option_button_id)
 		resolution_option_button_id += 1
+	resolution_option_button.selected = 5
 
 
 func _on_full_screen_toggled(toggled_on):
 	if toggled_on:
 		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
+		resolution_option_button.disabled = true
 	else:
 		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
+		resolution_option_button.disabled = false
+		_on_option_button_item_selected(option_button.selected)
 
 
 func _on_option_button_item_selected(index):
 	DisplayServer.window_set_size(resolutions.get(resolution_option_button.get_item_text(index)))
 
 
-func _on_load_pressed():
-	saveLoad.load_game()
+#from SaveMainMenu.gd
+func save_game():
+	options_dict['full_screen_button_pressed'] = full_screen.button_pressed
+	options_dict['option_button_selected'] = option_button.selected
+	
+	var file = FileAccess.open(SAVE_GAME_PATH, FileAccess.WRITE)
 
+	var json = JSON.stringify(options_dict)
+	
+	file.store_string(json)
+	file.close()
+
+func load_game():
+	if FileAccess.file_exists(SAVE_GAME_PATH):
+		var file = FileAccess.open(SAVE_GAME_PATH, FileAccess.READ)
+		var json = file.get_as_text()
+		var options_dict = JSON.parse_string(json)
+		
+		full_screen.button_pressed = options_dict['full_screen_button_pressed']
+		option_button.selected = options_dict['option_button_selected']
+		
+		apply_options(options_dict)
+
+
+func _on_load_pressed():
+	pass
+
+
+func apply_options(dict : Dictionary):
+	_on_full_screen_toggled(dict['full_screen_button_pressed'])
+	_on_option_button_item_selected(dict['option_button_selected'])
