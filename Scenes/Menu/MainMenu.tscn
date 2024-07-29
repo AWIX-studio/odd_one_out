@@ -125,6 +125,7 @@ offset_right = 298.0
 offset_bottom = 570.0
 
 [node name="MainMenu" type="Control" parent="Buttons"]
+visible = false
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
@@ -170,7 +171,6 @@ theme_override_font_sizes/font_size = 30
 text = "Выход"
 
 [node name="Options" type="Control" parent="Buttons"]
-visible = false
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
