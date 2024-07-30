@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://buqoebexr7wug"
-path="res://.godot/imported/night park.png-a24d66a521df2a9838075be531804eb9.ctex"
+uid="uid://l1jq4k8h3qdh"
+path="res://.godot/imported/TestBG.jpg-991c4903dd1e6d73c52c1e27d58adfe1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Scenes/Game/night park.png"
-dest_files=["res://.godot/imported/night park.png-a24d66a521df2a9838075be531804eb9.ctex"]
+source_file="res://Textures/BGs/TestBG.jpg"
+dest_files=["res://.godot/imported/TestBG.jpg-991c4903dd1e6d73c52c1e27d58adfe1.ctex"]
 
 [params]
 

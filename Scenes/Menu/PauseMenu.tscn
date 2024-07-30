@@ -165,7 +165,7 @@ layout_mode = 1
 anchors_preset = 9
 anchor_bottom = 1.0
 offset_right = 300.0
-offset_bottom = 2592.0
+offset_bottom = 3240.0
 grow_vertical = 2
 
 [node name="Panel" type="Panel" parent="SideMenu"]
