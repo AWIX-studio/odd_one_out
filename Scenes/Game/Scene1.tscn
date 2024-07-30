@@ -1,10 +1,9 @@
-[gd_scene load_steps=14 format=3 uid="uid://p0lr0t70vhvp"]
+[gd_scene load_steps=13 format=3 uid="uid://p0lr0t70vhvp"]
 
 [ext_resource type="Script" path="res://Scenes/Game/Scene1.gd" id="1_gw203"]
 [ext_resource type="Theme" uid="uid://cbf7j8no5y0jt" path="res://Themes/Test SAcene.tres" id="2_tdb6j"]
 [ext_resource type="StyleBox" uid="uid://1fji6e7tyj68" path="res://Themes/Test SAcene BG.tres" id="3_f158i"]
 [ext_resource type="Script" path="res://addons/dialogue_nodes/objects/DialogueBox.gd" id="4_finaf"]
-[ext_resource type="Resource" uid="uid://ic6qnefds8p3" path="res://Dialogues/chapter 0.tres" id="5_csd64"]
 [ext_resource type="Script" path="res://addons/dialogue_nodes/objects/bbcodeWait.gd" id="6_qlwic"]
 [ext_resource type="Script" path="res://addons/dialogue_nodes/objects/bbcodeGhost.gd" id="7_jbnk1"]
 [ext_resource type="Script" path="res://addons/dialogue_nodes/objects/bbcodeMatrix.gd" id="8_mvk85"]
@@ -29,7 +28,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_gw203")
 
-[node name="Control" type="Control" parent="."]
+[node name="BG" type="Control" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -37,7 +36,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="NightPark" type="TextureRect" parent="Control"]
+[node name="NightPark" type="TextureRect" parent="BG"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -65,7 +64,6 @@ grow_vertical = 0
 theme = ExtResource("2_tdb6j")
 theme_override_styles/panel = ExtResource("3_f158i")
 script = ExtResource("4_finaf")
-data = ExtResource("5_csd64")
 hide_portrait = true
 skip_input_action = "skip"
 custom_effects = Array[RichTextEffect]([SubResource("RichTextEffect_euf8c"), SubResource("RichTextEffect_exmgv"), SubResource("RichTextEffect_q18at")])

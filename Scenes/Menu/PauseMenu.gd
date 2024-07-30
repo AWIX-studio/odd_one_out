@@ -7,10 +7,10 @@ var is_animation_playing = false
 var is_paused = false
 
 func _input(event):
-	if Input.is_action_pressed('pause'):
-		if is_paused and not is_animation_playing:
+	if Input.is_action_pressed('pause') and not is_animation_playing:
+		if is_paused:
 			pause_hide()
-		elif not self.visible and not is_animation_playing:
+		elif not self.visible:
 			pause_show()
 
 func pause_show():

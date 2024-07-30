@@ -257,7 +257,6 @@ func _input(event):
 			if options_count == 1:
 				_dialogue_parser.select_option(0)
 
-
 ## Starts processing the dialogue [member data], starting with the Start Node with its ID set to [param start_id].
 func start(id := start_id):
 	if not _dialogue_parser: return
