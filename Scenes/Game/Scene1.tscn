@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://p0lr0t70vhvp"]
+[gd_scene load_steps=13 format=3 uid="uid://p0lr0t70vhvp"]
 
 [ext_resource type="Script" path="res://Scenes/Game/Scene1.gd" id="1_gw203"]
 [ext_resource type="Theme" uid="uid://cbf7j8no5y0jt" path="res://Themes/Test SAcene.tres" id="2_tdb6j"]
@@ -9,7 +9,6 @@
 [ext_resource type="Script" path="res://addons/dialogue_nodes/objects/bbcodeGhost.gd" id="7_jbnk1"]
 [ext_resource type="Script" path="res://addons/dialogue_nodes/objects/bbcodeMatrix.gd" id="8_mvk85"]
 [ext_resource type="PackedScene" uid="uid://dhcex8jyifhts" path="res://Scenes/Menu/PauseMenu.tscn" id="9_fvdnj"]
-[ext_resource type="Texture2D" uid="uid://l1jq4k8h3qdh" path="res://Textures/BGs/BG1.jpg" id="10_ej5kh"]
 
 [sub_resource type="RichTextEffect" id="RichTextEffect_euf8c"]
 script = ExtResource("6_qlwic")
@@ -28,11 +27,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_gw203")
-
-[node name="Bg1" type="Sprite2D" parent="."]
-position = Vector2(569, 320)
-scale = Vector2(0.425, 0.425)
-texture = ExtResource("10_ej5kh")
 
 [node name="DialogueBox" type="Panel" parent="."]
 visible = false
@@ -59,7 +53,6 @@ custom_effects = Array[RichTextEffect]([SubResource("RichTextEffect_euf8c"), Sub
 
 [node name="PauseMenu" parent="." instance=ExtResource("9_fvdnj")]
 unique_name_in_owner = true
-visible = false
 layout_mode = 1
 
 [node name="Timer" type="Timer" parent="."]
