@@ -47,7 +47,6 @@ texture = ExtResource("10_qxvne")
 expand_mode = 1
 
 [node name="DialogueBox" type="Panel" parent="."]
-visible = false
 custom_minimum_size = Vector2(1100, 180)
 layout_mode = 1
 anchors_preset = 7
@@ -78,4 +77,5 @@ process_callback = 0
 one_shot = true
 
 [connection signal="dialogue_ended" from="DialogueBox" to="." method="_on_dialogue_box_dialogue_ended"]
+[connection signal="dialogue_signal" from="DialogueBox" to="." method="_on_dialogue_box_dialogue_signal"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
