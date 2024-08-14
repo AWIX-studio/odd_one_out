@@ -248,6 +248,7 @@ func _input(event):
 				_wait_effect.skip = true
 			_on_wait_finished()
 		
+		# code by awed
 		elif is_running() and Input.is_action_just_pressed(skip_input_action) and options_container.visible:
 			var options_count = 0
 			for i in options_container.get_children():
