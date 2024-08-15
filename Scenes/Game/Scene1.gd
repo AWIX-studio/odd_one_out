@@ -43,6 +43,7 @@ func _on_dialogue_box_dialogue_signal(_value): # _value : String
 		NakimaGood += 1
 	if 'NakimaBad' in _value:
 		NakimaBad += 1
+		
 	if 'START' in _value: # Например 'START1' 'START2' 'START572'. Главное, что есть ключевое слово 'START'. В других проверках лучше не использовать 'START'. Для этого можно создать другую сцену и другой файл диалога.
 		if _value == 'START2':
 			$BG/BGImage.texture = preload('res://Textures/BGs/school class evening.png')
