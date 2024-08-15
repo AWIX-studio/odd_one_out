@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="DialogueData" load_steps=2 format=3 uid="uid://ic6qnefds8p3"]
+[gd_resource type="Resource" script_class="DialogueData" load_steps=2 format=3 uid="uid://dhp8muavttoyr"]
 
 [ext_resource type="Script" path="res://addons/dialogue_nodes/objects/DialogueData.gd" id="1_7q5ow"]
 
@@ -6,6 +6,7 @@
 script = ExtResource("1_7q5ow")
 starts = {
 "START1": &"0_1",
+"START10": &"0_10",
 "START2": &"0_2",
 "START3": &"0_3",
 "START4": &"0_4",
@@ -21,14 +22,19 @@ nodes = {
 "offset": Vector2(60, 340),
 "start_id": "START1"
 },
+"0_10": {
+"link": &"1_109",
+"offset": Vector2(37944.5, 1455.06),
+"start_id": "START10"
+},
 "0_2": {
 "link": &"1_7",
-"offset": Vector2(2040, 340),
+"offset": Vector2(2020, 740),
 "start_id": "START2"
 },
 "0_3": {
 "link": &"1_15",
-"offset": Vector2(4620, 340),
+"offset": Vector2(4620, 720),
 "start_id": "START3"
 },
 "0_4": {
@@ -71,7 +77,7 @@ nodes = {
 "text": ""
 }
 },
-"size": Vector2(300.002, 243),
+"size": Vector2(300, 243),
 "speaker": 1
 },
 "1_10": {
@@ -84,7 +90,7 @@ nodes = {
 "text": ""
 }
 },
-"size": Vector2(300.002, 240),
+"size": Vector2(351.996, 240),
 "speaker": 0
 },
 "1_100": {
@@ -97,7 +103,7 @@ nodes = {
 "text": ""
 }
 },
-"size": Vector2(303.012, 240),
+"size": Vector2(303.02, 240),
 "speaker": ""
 },
 "1_101": {
@@ -106,12 +112,116 @@ nodes = {
 "options": {
 0: {
 "condition": {},
-"link": "END",
+"link": &"1_102",
+"text": ""
+}
+},
+"size": Vector2(352.005, 240),
+"speaker": 0
+},
+"1_102": {
+"dialogue": "Ну, привет.",
+"offset": Vector2(35520, 1280),
+"options": {
+0: {
+"condition": {},
+"link": &"1_103",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": 6
+},
+"1_103": {
+"dialogue": "{{name}}, знакомься, это Накима! Я тебе про неë говорила сегодня.",
+"offset": Vector2(35867.2, 1336.02),
+"options": {
+0: {
+"condition": {},
+"link": &"1_104",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": 1
+},
+"1_104": {
+"dialogue": "А, Накима, приятно познакомиться!",
+"offset": Vector2(36195.2, 1341.13),
+"options": {
+0: {
+"condition": {},
+"link": &"1_105",
 "text": ""
 }
 },
 "size": Vector2(300, 240),
 "speaker": 0
+},
+"1_105": {
+"dialogue": "Да.. Мне тоже.",
+"offset": Vector2(36520, 1340),
+"options": {
+0: {
+"condition": {},
+"link": &"1_106",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": 3
+},
+"1_106": {
+"dialogue": "Она как-то странно мне отвечает...",
+"offset": Vector2(36887, 1318.45),
+"options": {
+0: {
+"condition": {},
+"link": &"1_107",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": ""
+},
+"1_107": {
+"dialogue": "Ну что, пойдëм к речке?",
+"offset": Vector2(37225.6, 1335.84),
+"options": {
+0: {
+"condition": {},
+"link": &"1_108",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": 1
+},
+"1_108": {
+"dialogue": "Да, пошли.",
+"offset": Vector2(37589.4, 1392.96),
+"options": {
+0: {
+"condition": {},
+"link": &"3_9",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": 0
+},
+"1_109": {
+"dialogue": "Мы пришли к берегу реки. Как же всë-таки здесь. живописно...",
+"offset": Vector2(38159.4, 1417.8),
+"options": {
+0: {
+"condition": {},
+"link": &"1_110",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": ""
 },
 "1_11": {
 "dialogue": "Вот значит пока нет родителей, этим займусь я, хи-хи! ",
@@ -123,8 +233,138 @@ nodes = {
 "text": ""
 }
 },
-"size": Vector2(300.002, 240),
+"size": Vector2(300, 240),
 "speaker": 1
+},
+"1_110": {
+"dialogue": "Красиво, правда? Мы с {{name}} часто гуляем здесь.",
+"offset": Vector2(38520, 1400),
+"options": {
+0: {
+"condition": {},
+"link": &"1_111",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": 1
+},
+"1_111": {
+"dialogue": "Да, очень красиво, прекрасный пейзаж!",
+"offset": Vector2(38860, 1380),
+"options": {
+0: {
+"condition": {},
+"link": &"1_112",
+"text": ""
+}
+},
+"size": Vector2(300.002, 240),
+"speaker": 3
+},
+"1_112": {
+"dialogue": "А вот там был раньше мостик, с которого мы прыгали в речку. Его убрали, но следы, как и воспоминания, остались.",
+"offset": Vector2(39204.4, 1400.42),
+"options": {
+0: {
+"condition": {},
+"link": &"1_113",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": 1
+},
+"1_113": {
+"dialogue": "А это что за деревяшки?",
+"offset": Vector2(39600, 1380),
+"options": {
+0: {
+"condition": {},
+"link": &"1_114",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": 3
+},
+"1_114": {
+"dialogue": "А, это? Раньше здесь можно было арендовать небольшие лодочки, но от этого быстро отказались.",
+"offset": Vector2(39940.1, 1438.35),
+"options": {
+0: {
+"condition": {},
+"link": &"1_115",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": 1
+},
+"1_115": {
+"dialogue": "Большинство лодок забрали, но одна лодка была сломана, так что еë оставили на берегу.",
+"offset": Vector2(40302.4, 1454.49),
+"options": {
+0: {
+"condition": {},
+"link": &"1_116",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": 1
+},
+"1_116": {
+"dialogue": "Да, я помню, как я еë потом доламывал.",
+"offset": Vector2(40636.4, 1435.86),
+"options": {
+0: {
+"condition": {},
+"link": &"1_117",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": 0
+},
+"1_117": {
+"dialogue": "И чуть без руки не остался!",
+"offset": Vector2(40980, 1460),
+"options": {
+0: {
+"condition": {},
+"link": &"1_118",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": 1
+},
+"1_118": {
+"dialogue": "Не напоминай...",
+"offset": Vector2(41330.3, 1445.8),
+"options": {
+0: {
+"condition": {},
+"link": &"1_119",
+"text": ""
+}
+},
+"size": Vector2(300.002, 240),
+"speaker": 0
+},
+"1_119": {
+"dialogue": "Вы давно знакомы, я погляжу.",
+"offset": Vector2(41684.2, 1443.32),
+"options": {
+0: {
+"condition": {},
+"link": &"1_120",
+"text": ""
+}
+},
+"size": Vector2(300.002, 240),
+"speaker": 3
 },
 "1_12": {
 "dialogue": "Ну я ещë подумаю, оставлять ли тебя в гостях на долго...",
@@ -133,6 +373,141 @@ nodes = {
 0: {
 "condition": {},
 "link": &"1_13",
+"text": ""
+}
+},
+"size": Vector2(352, 240),
+"speaker": 0
+},
+"1_120": {
+"dialogue": "Н-ну да, с 6 класса общаемся..",
+"offset": Vector2(42020, 1500),
+"options": {
+0: {
+"condition": {},
+"link": &"1_121",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": 0
+},
+"1_121": {
+"dialogue": "М-м..",
+"offset": Vector2(42340, 1500),
+"options": {
+0: {
+"condition": {},
+"link": &"1_122",
+"text": ""
+}
+},
+"size": Vector2(300.002, 240),
+"speaker": 3
+},
+"1_122": {
+"dialogue": "Меня напрягает еë поведение, будто она мне совсем не доверяет. А в прочем мы знакомы всего день, это логично.",
+"offset": Vector2(42680, 1500),
+"options": {
+0: {
+"condition": {},
+"link": &"1_123",
+"text": ""
+}
+},
+"size": Vector2(300.001, 240),
+"speaker": ""
+},
+"1_123": {
+"dialogue": "Мы продолжили гулять по берегу, а наш разговор всë сильнее оживлялся и мы с Накимой начали привыкать друг к другу.",
+"offset": Vector2(43023.8, 1478.09),
+"options": {
+0: {
+"condition": {},
+"link": &"1_124",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": ""
+},
+"1_124": {
+"dialogue": "А, кстати, Накима, может быть ты всë-таки покажешь нам свои рисунки?",
+"offset": Vector2(43349.9, 1461.94),
+"options": {
+0: {
+"condition": {},
+"link": &"1_125",
+"text": ""
+}
+},
+"size": Vector2(300.002, 240),
+"speaker": 1
+},
+"1_125": {
+"dialogue": "А, ну не знаю... Я стесняюсь своих работ, я просто для себя этим занимаюсь...",
+"offset": Vector2(43686.4, 1468.15),
+"options": {
+0: {
+"condition": {},
+"link": &"1_126",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": 3
+},
+"1_126": {
+"dialogue": "Да ладно тебе! Обещаю, мы не будем смеяться. Да, {{name}}? *она ударила меня локтем*",
+"offset": Vector2(44026.6, 1502.92),
+"options": {
+0: {
+"condition": {},
+"link": &"3_10",
+"text": "Не то, чтобы я любил творчество..."
+},
+1: {
+"condition": {},
+"link": &"3_11",
+"text": "Я очень уважаю художество."
+}
+},
+"size": Vector2(300, 243),
+"speaker": 1
+},
+"1_127": {
+"dialogue": "Ну может быть в следующий раз... В любом случае мой телефон сел, а я больше никак и не покажу.",
+"offset": Vector2(44660, 1560),
+"options": {
+0: {
+"condition": {},
+"link": &"1_128",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": 3
+},
+"1_128": {
+"dialogue": "Вот и договорились! Будем ждать!",
+"offset": Vector2(44979.7, 1584.05),
+"options": {
+0: {
+"condition": {},
+"link": &"1_129",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": 1
+},
+"1_129": {
+"dialogue": "Кстати говоря, а сколько время?",
+"offset": Vector2(45300, 1620),
+"options": {
+0: {
+"condition": {},
+"link": &"1_130",
 "text": ""
 }
 },
@@ -152,18 +527,283 @@ nodes = {
 "size": Vector2(300, 240),
 "speaker": 1
 },
+"1_130": {
+"dialogue": "Вакуми достала телефон и еë глаза нервно забегали.",
+"offset": Vector2(45629.4, 1651.32),
+"options": {
+0: {
+"condition": {},
+"link": &"1_131",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": ""
+},
+"1_131": {
+"dialogue": "Да... Мало! Можем ещë долго гулять!",
+"offset": Vector2(45960, 1660),
+"options": {
+0: {
+"condition": {},
+"link": &"1_132",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": 1
+},
+"1_132": {
+"dialogue": "Я вообще-то спросил сколько время, отвечай.",
+"offset": Vector2(46300, 1660),
+"options": {
+0: {
+"condition": {},
+"link": &"1_133",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": 0
+},
+"1_133": {
+"dialogue": "21:47...",
+"offset": Vector2(46648.5, 1729.04),
+"options": {
+0: {
+"condition": {},
+"link": &"1_134",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": 1
+},
+"1_134": {
+"dialogue": "Так и знал. Мне уже пора домой, а то я не высплюсь.",
+"offset": Vector2(47010.3, 1751.58),
+"options": {
+0: {
+"condition": {},
+"link": &"1_135",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": 0
+},
+"1_135": {
+"dialogue": "Мне так-то тоже желательно вернуться домой пораньше.",
+"offset": Vector2(47363.4, 1711.01),
+"options": {
+0: {
+"condition": {},
+"link": &"1_136",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": 3
+},
+"1_136": {
+"dialogue": "Ну вот блин, толком и не погуляли!",
+"offset": Vector2(47703.2, 1754.59),
+"options": {
+0: {
+"condition": {},
+"link": &"1_137",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": 1
+},
+"1_137": {
+"dialogue": "Не переживай, не последний же день живëм! У нас ещë уйма времени чтобы собраться погулять.",
+"offset": Vector2(48047.3, 1745.57),
+"options": {
+0: {
+"condition": {},
+"link": &"1_138",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": 0
+},
+"1_138": {
+"dialogue": "Ну да, ты прав... Ладно, Накима, прощаемся? Тебе же в ту сторону, да? *Вакуми указала в противоположную сторону от моего дома*",
+"offset": Vector2(48378.9, 1769.61),
+"options": {
+0: {
+"condition": {},
+"link": &"1_139",
+"text": ""
+}
+},
+"size": Vector2(300.001, 240),
+"speaker": 1
+},
+"1_139": {
+"dialogue": "Да, да. Ну, пока, ребята! Рада была с вами погулять!",
+"offset": Vector2(48760, 1760),
+"options": {
+0: {
+"condition": {},
+"link": &"1_140",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": 3
+},
 "1_14": {
 "dialogue": "И ведь классное было время... ",
 "offset": Vector2(4320, 340),
 "options": {
 0: {
 "condition": {},
-"link": "END",
+"link": &"3_2",
 "text": ""
 }
 },
 "size": Vector2(300, 240),
 "speaker": ""
+},
+"1_140": {
+"dialogue": "Пока! Надеюсь, мы ещë увидимся!",
+"offset": Vector2(49103.7, 1777.09),
+"options": {
+0: {
+"condition": {},
+"link": &"1_141",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": 0
+},
+"1_141": {
+"dialogue": "Ну что, мне провожать тебя?",
+"offset": Vector2(49463, 1811.65),
+"options": {
+0: {
+"condition": {},
+"link": &"1_142",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": 0
+},
+"1_142": {
+"dialogue": "Я только за!",
+"offset": Vector2(49829.2, 1828.18),
+"options": {
+0: {
+"condition": {},
+"link": &"1_143",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": 1
+},
+"1_143": {
+"dialogue": "Она схватила меня за руку и мы пошли в сторону еë дома.",
+"offset": Vector2(50156.8, 1832.69),
+"options": {
+0: {
+"condition": {},
+"link": &"1_144",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": ""
+},
+"1_144": {
+"dialogue": "Ну, как тебе Накима?",
+"offset": Vector2(50500, 1840),
+"options": {
+0: {
+"condition": {},
+"link": &"3_13",
+"text": "Да вроде как обычная девочка"
+},
+1: {
+"condition": {},
+"link": &"3_12",
+"text": "Хорошая, интересная девочка"
+}
+},
+"size": Vector2(300, 243),
+"speaker": 1
+},
+"1_145": {
+"dialogue": "Не то, чтобы я любил творчество, но... Хотелось бы посмотреть.",
+"offset": Vector2(44560, 1260),
+"options": {
+0: {
+"condition": {},
+"link": &"1_127",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": 0
+},
+"1_146": {
+"dialogue": "Кхм, я очень уважаю художество, так что я даже не посмею посмеяться над этим.",
+"offset": Vector2(44527.4, 1848.19),
+"options": {
+0: {
+"condition": {},
+"link": &"1_127",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": 0
+},
+"1_147": {
+"dialogue": "Хорошая, интересная девочка. Сначала думал, что она меня боится, но потом всë развеялось и с ней стало довольно комфортно.",
+"offset": Vector2(51040, 2220),
+"options": {
+0: {
+"condition": {},
+"link": &"1_149",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": 0
+},
+"1_148": {
+"dialogue": "Да вроде как обычная девочка. Сначала думал, что она меня боится, но потом всë развеялось и с ней стало комфортно. ",
+"offset": Vector2(51053.9, 1779.02),
+"options": {
+0: {
+"condition": {},
+"link": &"1_149",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": 0
+},
+"1_149": {
+"dialogue": "Мне тоже она нравится! У неë довольно приятный характер, да и мне с ней тоже комфортно.",
+"offset": Vector2(51431.9, 1954.12),
+"options": {
+0: {
+"condition": {},
+"link": &"1_150",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": 1
 },
 "1_15": {
 "dialogue": "Ты ужасен, извращенец, эгоист! Как я вообще могла дружить с тобой!? ",
@@ -178,6 +818,140 @@ nodes = {
 "size": Vector2(300, 240),
 "speaker": 1
 },
+"1_150": {
+"dialogue": "Следующие 5 минут прошли в тишине. Я хотел сказать хоть что-то, но ни слова не смог выдавить из себя.",
+"offset": Vector2(51838.4, 2038.76),
+"options": {
+0: {
+"condition": {},
+"link": &"1_151",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": ""
+},
+"1_151": {
+"dialogue": "Вдруг, в неожиданный момент, я вспомнил, что хотел пригласить еë погулять вдвоëм по городу, потому что недавно выиграл небольшой турнир по Doba 2.",
+"offset": Vector2(52180, 2040),
+"options": {
+0: {
+"condition": {},
+"link": &"3_14",
+"text": "Приглашаю Вакуми"
+},
+1: {
+"condition": {},
+"link": &"3_15",
+"text": "Приглашаю Накиму"
+}
+},
+"size": Vector2(300, 242),
+"speaker": ""
+},
+"1_152": {
+"dialogue": "Вакуми, слушай, у тебя на завтра есть планы?",
+"offset": Vector2(52740.9, 2028.24),
+"options": {
+0: {
+"condition": {},
+"link": &"1_153",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": 0
+},
+"1_153": {
+"dialogue": "Хм, ну вроде как нет, думала валяться и отдыхать весь день.",
+"offset": Vector2(53090.1, 2064.3),
+"options": {
+0: {
+"condition": {},
+"link": &"1_154",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": 1
+},
+"1_154": {
+"dialogue": "1. Бро, я броукам никакого респекта не кидаю. Да, бывает судьба плохо распоряжается, но по итогу они же в этом виноваты. 
+2. Снитча за сексом с парнем или парнями я не заставал никогда, потому что я с ними не общаюсь
+
+",
+"offset": Vector2(53432.7, 2106.37),
+"options": {
+0: {
+"condition": {},
+"link": &"1_156",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": 1
+},
+"1_155": {
+"dialogue": "6. 52, братуха
+7. Бывает грешок за мной
+8. Без вариантов, сделать salat
+9. Они слишком лейм для реп батла со мной
+10. 7 патронов и магазин в кармане на 52",
+"offset": Vector2(53796.2, 2097.36),
+"options": {
+0: {
+"condition": {},
+"link": "END",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": 1
+},
+"1_156": {
+"dialogue": "3. Я хаслю 8 дней в неделю бро
+4. Топ 3 хоуми для драйв бая по кварталам:
+Номер 3 - модмеух
+Номер 2 - толбаеб
+Номер 1 - Koiloфаr
+5. Питер естественно брат",
+"offset": Vector2(53599.5, 2401.94),
+"options": {
+0: {
+"condition": {},
+"link": &"1_155",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": 1
+},
+"1_157": {
+"dialogue": "Ладно, решено, приглашаю Вакуми.",
+"offset": Vector2(52560, 1720),
+"options": {
+0: {
+"condition": {},
+"link": &"1_152",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": ""
+},
+"1_158": {
+"dialogue": "А может пригласить Накиму... Но мы ещë мало знакомы. Ладно, решкно, приглашаю Вакуми.",
+"offset": Vector2(52676.8, 2449.34),
+"options": {
+0: {
+"condition": {},
+"link": &"1_152",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": ""
+},
 "1_16": {
 "dialogue": "П-почему ты не веришь мне?! Это же всё слухи!",
 "offset": Vector2(5128.63, 394.309),
@@ -188,7 +962,7 @@ nodes = {
 "text": ""
 }
 },
-"size": Vector2(300, 240),
+"size": Vector2(352, 240),
 "speaker": 0
 },
 "1_17": {
@@ -210,11 +984,11 @@ nodes = {
 "options": {
 0: {
 "condition": {},
-"link": "END",
+"link": &"3_3",
 "text": ""
 }
 },
-"size": Vector2(300.002, 240),
+"size": Vector2(300.004, 240),
 "speaker": ""
 },
 "1_19": {
@@ -227,7 +1001,7 @@ nodes = {
 "text": ""
 }
 },
-"size": Vector2(300.006, 240),
+"size": Vector2(300.004, 240),
 "speaker": 1
 },
 "1_2": {
@@ -240,7 +1014,7 @@ nodes = {
 "text": ""
 }
 },
-"size": Vector2(300, 240),
+"size": Vector2(352, 240),
 "speaker": 0
 },
 "1_20": {
@@ -279,7 +1053,7 @@ nodes = {
 "text": ""
 }
 },
-"size": Vector2(300, 240),
+"size": Vector2(352, 240),
 "speaker": 0
 },
 "1_23": {
@@ -292,7 +1066,7 @@ nodes = {
 "text": ""
 }
 },
-"size": Vector2(300.002, 240),
+"size": Vector2(300, 240),
 "speaker": ""
 },
 "1_24": {
@@ -305,7 +1079,7 @@ nodes = {
 "text": ""
 }
 },
-"size": Vector2(300, 240),
+"size": Vector2(352, 240),
 "speaker": 0
 },
 "1_25": {
@@ -318,7 +1092,7 @@ nodes = {
 "text": ""
 }
 },
-"size": Vector2(300.004, 240),
+"size": Vector2(352, 240),
 "speaker": 0
 },
 "1_26": {
@@ -396,7 +1170,7 @@ nodes = {
 "text": ""
 }
 },
-"size": Vector2(364.463, 240),
+"size": Vector2(364.461, 240),
 "speaker": ""
 },
 "1_31": {
@@ -413,7 +1187,7 @@ nodes = {
 "speaker": ""
 },
 "1_32": {
-"dialogue": "[s]Но она ведь лжëт.[/s]",
+"dialogue": "[shake]Но она ведь лжëт.[/shake]",
 "offset": Vector2(10900, 980),
 "options": {
 0: {
@@ -435,7 +1209,7 @@ nodes = {
 "text": ""
 }
 },
-"size": Vector2(300.002, 240),
+"size": Vector2(300.004, 240),
 "speaker": ""
 },
 "1_34": {
@@ -448,7 +1222,7 @@ nodes = {
 "text": ""
 }
 },
-"size": Vector2(300.002, 240),
+"size": Vector2(300, 240),
 "speaker": 5
 },
 "1_35": {
@@ -465,7 +1239,7 @@ nodes = {
 "speaker": ""
 },
 "1_36": {
-"dialogue": "[wave]Ей тебя жалко. Жалко. Жалкий щенок. Драный, немощный, слабый щенок, которого жалко оставлять одного.[/wave]",
+"dialogue": "[shake]Ей тебя жалко. Жалко. Жалкий щенок. Драный, немощный, слабый щенок, которого жалко оставлять одного.[/shake]",
 "offset": Vector2(12300, 1180),
 "options": {
 0: {
@@ -487,11 +1261,11 @@ nodes = {
 "text": ""
 }
 },
-"size": Vector2(300, 240),
+"size": Vector2(300.002, 240),
 "speaker": ""
 },
 "1_38": {
-"dialogue": "[wave]Ты никогда не станешь лучше в еë глазах. Она тебя никогда не полюбит. Смирись.[/wave]",
+"dialogue": "[shake]Ты никогда не станешь лучше в еë глазах. Она тебя никогда не полюбит. Смирись.[/shake]",
 "offset": Vector2(12960, 1180),
 "options": {
 0: {
@@ -500,11 +1274,11 @@ nodes = {
 "text": ""
 }
 },
-"size": Vector2(300, 240),
+"size": Vector2(300.002, 240),
 "speaker": 5
 },
 "1_39": {
-"dialogue": "[wave]Лишний здесь[/wave]",
+"dialogue": "[shake]Лишний здесь[/shake]",
 "offset": Vector2(13305, 1198.08),
 "options": {
 0: {
@@ -526,11 +1300,11 @@ nodes = {
 "text": ""
 }
 },
-"size": Vector2(300, 240),
+"size": Vector2(352, 240),
 "speaker": 0
 },
 "1_40": {
-"dialogue": "[wave]Только[/wave]",
+"dialogue": "[shake]Только[/shake]",
 "offset": Vector2(13632.1, 1252.72),
 "options": {
 0: {
@@ -543,7 +1317,7 @@ nodes = {
 "speaker": 5
 },
 "1_41": {
-"dialogue": "[wave]Ты. Ты.[/wave]",
+"dialogue": "[shake]Ты. Ты.[/shake]",
 "offset": Vector2(13975, 1285.51),
 "options": {
 0: {
@@ -556,64 +1330,14 @@ nodes = {
 "speaker": 5
 },
 "1_42": {
-"dialogue": "[wave]Ты
-Ты
-Ты
-Ты
-Ты
-Ты
-Ты
-Ты
-Ты
-Ты
-Ты
-Ты
-Ты
-Ты
-Ты
-Ты
-Ты
-Ты
-Ты
-Ты
-Ты
-Ты
-Ты
-Ты
-Ты
-Ты
-Ты
-Ты
-Ты
-Ты
-Ты
-Ты
-Ты
-Ты
-Ты
-Ты
-Ты
-Ты
-Ты
-Ты
-Ты
-Ты
-Ты
-Ты
-Ты
-Ты
-Ты
-Ты
-Ты
-Ты
-Ты
-Ты[/wave]
+"dialogue": "[shake]Ты
+Ты[/shake]
 ",
 "offset": Vector2(14301.5, 1254.09),
 "options": {
 0: {
 "condition": {},
-"link": "END",
+"link": &"3_4",
 "text": ""
 }
 },
@@ -630,7 +1354,7 @@ nodes = {
 "text": ""
 }
 },
-"size": Vector2(300, 240),
+"size": Vector2(352, 240),
 "speaker": 0
 },
 "1_44": {
@@ -643,7 +1367,7 @@ nodes = {
 "text": ""
 }
 },
-"size": Vector2(300, 240),
+"size": Vector2(352, 240),
 "speaker": 0
 },
 "1_45": {
@@ -656,7 +1380,7 @@ nodes = {
 "text": ""
 }
 },
-"size": Vector2(300, 240),
+"size": Vector2(300.004, 240),
 "speaker": ""
 },
 "1_46": {
@@ -669,7 +1393,7 @@ nodes = {
 "text": ""
 }
 },
-"size": Vector2(300, 240),
+"size": Vector2(352.002, 240),
 "speaker": 0
 },
 "1_47": {
@@ -678,7 +1402,7 @@ nodes = {
 "options": {
 0: {
 "condition": {},
-"link": "END",
+"link": &"3_5",
 "text": ""
 }
 },
@@ -695,7 +1419,7 @@ nodes = {
 "text": ""
 }
 },
-"size": Vector2(300.002, 240),
+"size": Vector2(300.008, 240),
 "speaker": ""
 },
 "1_49": {
@@ -708,7 +1432,7 @@ nodes = {
 "text": ""
 }
 },
-"size": Vector2(300.002, 240),
+"size": Vector2(300.004, 240),
 "speaker": ""
 },
 "1_5": {
@@ -721,7 +1445,7 @@ nodes = {
 "text": ""
 }
 },
-"size": Vector2(300, 240),
+"size": Vector2(352, 240),
 "speaker": 0
 },
 "1_50": {
@@ -734,7 +1458,7 @@ nodes = {
 "text": ""
 }
 },
-"size": Vector2(300, 240),
+"size": Vector2(300.004, 240),
 "speaker": ""
 },
 "1_51": {
@@ -760,7 +1484,7 @@ nodes = {
 "text": ""
 }
 },
-"size": Vector2(300.002, 240),
+"size": Vector2(300.004, 240),
 "speaker": ""
 },
 "1_53": {
@@ -773,7 +1497,7 @@ nodes = {
 "text": ""
 }
 },
-"size": Vector2(300, 240),
+"size": Vector2(352.012, 240),
 "speaker": 0
 },
 "1_54": {
@@ -786,7 +1510,7 @@ nodes = {
 "text": ""
 }
 },
-"size": Vector2(300.002, 240),
+"size": Vector2(300.006, 240),
 "speaker": 1
 },
 "1_55": {
@@ -799,7 +1523,7 @@ nodes = {
 "text": ""
 }
 },
-"size": Vector2(300.002, 240),
+"size": Vector2(300, 240),
 "speaker": ""
 },
 "1_56": {
@@ -812,7 +1536,7 @@ nodes = {
 "text": ""
 }
 },
-"size": Vector2(300.002, 240),
+"size": Vector2(352.002, 240),
 "speaker": 0
 },
 "1_57": {
@@ -825,7 +1549,7 @@ nodes = {
 "text": ""
 }
 },
-"size": Vector2(300, 240),
+"size": Vector2(300.008, 240.001),
 "speaker": 1
 },
 "1_58": {
@@ -838,7 +1562,7 @@ nodes = {
 "text": ""
 }
 },
-"size": Vector2(300.002, 240),
+"size": Vector2(300.004, 240),
 "speaker": ""
 },
 "1_59": {
@@ -851,7 +1575,7 @@ nodes = {
 "text": ""
 }
 },
-"size": Vector2(300, 240),
+"size": Vector2(352.006, 240),
 "speaker": 0
 },
 "1_6": {
@@ -860,7 +1584,7 @@ nodes = {
 "options": {
 0: {
 "condition": {},
-"link": "END",
+"link": &"3_1",
 "text": ""
 }
 },
@@ -890,7 +1614,7 @@ nodes = {
 "text": ""
 }
 },
-"size": Vector2(300.002, 240),
+"size": Vector2(352.002, 240),
 "speaker": 0
 },
 "1_62": {
@@ -912,11 +1636,11 @@ nodes = {
 "options": {
 0: {
 "condition": {},
-"link": "END",
+"link": &"3_6",
 "text": ""
 }
 },
-"size": Vector2(300.003, 240),
+"size": Vector2(300.002, 240),
 "speaker": ""
 },
 "1_64": {
@@ -942,7 +1666,7 @@ nodes = {
 "text": ""
 }
 },
-"size": Vector2(300, 240),
+"size": Vector2(300.002, 240),
 "speaker": ""
 },
 "1_66": {
@@ -968,7 +1692,7 @@ nodes = {
 "text": ""
 }
 },
-"size": Vector2(300.002, 240),
+"size": Vector2(300.004, 240),
 "speaker": ""
 },
 "1_68": {
@@ -981,7 +1705,7 @@ nodes = {
 "text": ""
 }
 },
-"size": Vector2(300, 240),
+"size": Vector2(300.004, 240),
 "speaker": 1
 },
 "1_69": {
@@ -1020,7 +1744,7 @@ nodes = {
 "text": ""
 }
 },
-"size": Vector2(300, 240),
+"size": Vector2(352, 240),
 "speaker": 0
 },
 "1_71": {
@@ -1033,7 +1757,7 @@ nodes = {
 "text": ""
 }
 },
-"size": Vector2(300, 240),
+"size": Vector2(300.002, 240),
 "speaker": 1
 },
 "1_72": {
@@ -1046,7 +1770,7 @@ nodes = {
 "text": ""
 }
 },
-"size": Vector2(300, 240),
+"size": Vector2(352.006, 240),
 "speaker": 0
 },
 "1_73": {
@@ -1059,7 +1783,7 @@ nodes = {
 "text": ""
 }
 },
-"size": Vector2(300, 240),
+"size": Vector2(300.004, 240),
 "speaker": 1
 },
 "1_74": {
@@ -1072,7 +1796,7 @@ nodes = {
 "text": ""
 }
 },
-"size": Vector2(300, 240),
+"size": Vector2(300.002, 240),
 "speaker": ""
 },
 "1_75": {
@@ -1085,7 +1809,7 @@ nodes = {
 "text": ""
 }
 },
-"size": Vector2(300, 240),
+"size": Vector2(352.012, 240),
 "speaker": 0
 },
 "1_76": {
@@ -1098,7 +1822,7 @@ nodes = {
 "text": ""
 }
 },
-"size": Vector2(300.002, 240),
+"size": Vector2(300.014, 240),
 "speaker": 1
 },
 "1_77": {
@@ -1111,7 +1835,7 @@ nodes = {
 "text": ""
 }
 },
-"size": Vector2(300, 240),
+"size": Vector2(300.002, 240),
 "speaker": ""
 },
 "1_78": {
@@ -1124,7 +1848,7 @@ nodes = {
 "text": ""
 }
 },
-"size": Vector2(300, 240),
+"size": Vector2(300.008, 240),
 "speaker": 1
 },
 "1_79": {
@@ -1137,7 +1861,7 @@ nodes = {
 "text": ""
 }
 },
-"size": Vector2(300, 240),
+"size": Vector2(300.01, 240),
 "speaker": ""
 },
 "1_8": {
@@ -1150,11 +1874,11 @@ nodes = {
 "text": ""
 }
 },
-"size": Vector2(300.002, 240),
+"size": Vector2(352, 240),
 "speaker": 0
 },
 "1_80": {
-"dialogue": "Еë зовут Натсуми, и она очень милая! Ростом примерно с меня и, вроде как, она младше нас на год.",
+"dialogue": "Еë зовут Накима, и она очень милая! Ростом примерно с меня и, вроде как, она младше нас на год.",
 "offset": Vector2(27821.8, 1294.71),
 "options": {
 0: {
@@ -1163,7 +1887,7 @@ nodes = {
 "text": ""
 }
 },
-"size": Vector2(300.001, 240),
+"size": Vector2(300.008, 240),
 "speaker": 1
 },
 "1_81": {
@@ -1176,7 +1900,7 @@ nodes = {
 "text": ""
 }
 },
-"size": Vector2(300.004, 240),
+"size": Vector2(300, 240),
 "speaker": 1
 },
 "1_82": {
@@ -1189,7 +1913,7 @@ nodes = {
 "text": ""
 }
 },
-"size": Vector2(300, 240),
+"size": Vector2(300.004, 240),
 "speaker": ""
 },
 "1_83": {
@@ -1202,7 +1926,7 @@ nodes = {
 "text": ""
 }
 },
-"size": Vector2(300.002, 240),
+"size": Vector2(300.014, 240),
 "speaker": 1
 },
 "1_84": {
@@ -1215,7 +1939,7 @@ nodes = {
 "text": ""
 }
 },
-"size": Vector2(300.003, 240),
+"size": Vector2(352.006, 240),
 "speaker": 0
 },
 "1_85": {
@@ -1228,7 +1952,7 @@ nodes = {
 "text": ""
 }
 },
-"size": Vector2(300, 240),
+"size": Vector2(300.004, 240),
 "speaker": 1
 },
 "1_86": {
@@ -1241,7 +1965,7 @@ nodes = {
 "text": ""
 }
 },
-"size": Vector2(300, 240),
+"size": Vector2(352.006, 240),
 "speaker": 0
 },
 "1_87": {
@@ -1254,7 +1978,7 @@ nodes = {
 "text": ""
 }
 },
-"size": Vector2(300.003, 240),
+"size": Vector2(300.012, 240),
 "speaker": ""
 },
 "1_88": {
@@ -1267,7 +1991,7 @@ nodes = {
 "text": ""
 }
 },
-"size": Vector2(300, 240),
+"size": Vector2(300.006, 240),
 "speaker": 1
 },
 "1_89": {
@@ -1280,7 +2004,7 @@ nodes = {
 "text": ""
 }
 },
-"size": Vector2(300.004, 240),
+"size": Vector2(352.001, 240),
 "speaker": 0
 },
 "1_9": {
@@ -1293,7 +2017,7 @@ nodes = {
 "text": ""
 }
 },
-"size": Vector2(300.002, 240),
+"size": Vector2(300.004, 240),
 "speaker": 1
 },
 "1_90": {
@@ -1306,7 +2030,7 @@ nodes = {
 "text": ""
 }
 },
-"size": Vector2(300, 240),
+"size": Vector2(300.005, 240),
 "speaker": 1
 },
 "1_91": {
@@ -1319,20 +2043,20 @@ nodes = {
 "text": ""
 }
 },
-"size": Vector2(300, 240),
+"size": Vector2(352.006, 240),
 "speaker": 0
 },
 "1_92": {
-"dialogue": "По дороге домой я всë время думал то о Вакуми, то об этой Натсуми, которую я знать не знаю. Но первое впечатление бывает обманчивым, так что дождусь вечера и не буду ничего представлять.",
+"dialogue": "По дороге домой я всë время думал то о Вакуми, то об этой Накима, которую я знать не знаю. Но первое впечатление бывает обманчивым, так что дождусь вечера и не буду ничего представлять.",
 "offset": Vector2(31872.1, 1325.2),
 "options": {
 0: {
 "condition": {},
-"link": "END",
+"link": &"3_7",
 "text": ""
 }
 },
-"size": Vector2(300, 240),
+"size": Vector2(300.003, 240),
 "speaker": ""
 },
 "1_93": {
@@ -1345,7 +2069,7 @@ nodes = {
 "text": ""
 }
 },
-"size": Vector2(300, 240),
+"size": Vector2(300.004, 240),
 "speaker": ""
 },
 "1_94": {
@@ -1358,7 +2082,7 @@ nodes = {
 "text": ""
 }
 },
-"size": Vector2(300.003, 240),
+"size": Vector2(300.006, 240),
 "speaker": ""
 },
 "1_95": {
@@ -1371,7 +2095,7 @@ nodes = {
 "text": ""
 }
 },
-"size": Vector2(300.004, 240),
+"size": Vector2(300.006, 240),
 "speaker": ""
 },
 "1_96": {
@@ -1380,11 +2104,11 @@ nodes = {
 "options": {
 0: {
 "condition": {},
-"link": "END",
+"link": &"3_8",
 "text": ""
 }
 },
-"size": Vector2(300.002, 240),
+"size": Vector2(300.014, 240),
 "speaker": ""
 },
 "1_97": {
@@ -1397,7 +2121,7 @@ nodes = {
 "text": ""
 }
 },
-"size": Vector2(300.005, 240),
+"size": Vector2(300.012, 240),
 "speaker": ""
 },
 "1_98": {
@@ -1410,7 +2134,7 @@ nodes = {
 "text": ""
 }
 },
-"size": Vector2(300.004, 240),
+"size": Vector2(300.008, 240),
 "speaker": ""
 },
 "1_99": {
@@ -1423,14 +2147,89 @@ nodes = {
 "text": ""
 }
 },
-"size": Vector2(300.004, 240),
+"size": Vector2(352.005, 240),
 "speaker": 0
+},
+"3_1": {
+"link": "END",
+"offset": Vector2(1940, 640),
+"signalValue": "START2"
+},
+"3_10": {
+"link": &"1_145",
+"offset": Vector2(44340, 1420),
+"signalValue": "VakumiGood"
+},
+"3_11": {
+"link": &"1_146",
+"offset": Vector2(44420, 1760),
+"signalValue": "NakimaGood"
+},
+"3_12": {
+"link": &"1_147",
+"offset": Vector2(50817.6, 2196.75),
+"signalValue": "NakimaGood"
+},
+"3_13": {
+"link": &"1_148",
+"offset": Vector2(50820, 1700),
+"signalValue": "VakumiGood"
+},
+"3_14": {
+"link": &"1_157",
+"offset": Vector2(52340, 1840),
+"signalValue": "VakumiGood"
+},
+"3_15": {
+"link": &"1_158",
+"offset": Vector2(52400, 2440),
+"signalValue": "NakimaGood"
+},
+"3_2": {
+"link": "END",
+"offset": Vector2(4569.25, 242.698),
+"signalValue": "START3"
+},
+"3_3": {
+"link": "END",
+"offset": Vector2(6123.82, 891.185),
+"signalValue": "START4"
+},
+"3_4": {
+"link": "END",
+"offset": Vector2(14642.5, 1531.83),
+"signalValue": "START5"
+},
+"3_5": {
+"link": "END",
+"offset": Vector2(16260, 1500),
+"signalValue": "START6"
+},
+"3_6": {
+"link": "END",
+"offset": Vector2(21958.2, 1569.83),
+"signalValue": "START7"
+},
+"3_7": {
+"link": "END",
+"offset": Vector2(32099.4, 1169.83),
+"signalValue": "START8"
+},
+"3_8": {
+"link": "END",
+"offset": Vector2(33480, 1580),
+"signalValue": "START9"
+},
+"3_9": {
+"link": "END",
+"offset": Vector2(37942, 1570.55),
+"signalValue": "START10"
 }
 }
 variables = {
 "name": {
 "type": 4,
-"value": "авед"
+"value": "727"
 }
 }
 strays = Array[String]([])

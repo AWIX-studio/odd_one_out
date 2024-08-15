@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="CharacterList" load_steps=9 format=3 uid="uid://cx0frjnmntcyx"]
+[gd_resource type="Resource" script_class="CharacterList" load_steps=10 format=3 uid="uid://dwkl6gonw4u0l"]
 
 [ext_resource type="Script" path="res://addons/dialogue_nodes/objects/Character.gd" id="1_mgf42"]
 [ext_resource type="Script" path="res://addons/dialogue_nodes/objects/CharacterList.gd" id="2_tdrix"]
@@ -6,7 +6,7 @@
 [sub_resource type="Resource" id="Resource_0ilsg"]
 resource_name = "гг"
 script = ExtResource("1_mgf42")
-name = "авед"
+name = "кайф"
 color = Color(0.817802, 0.817802, 0.814794, 1)
 
 [sub_resource type="Resource" id="Resource_fcafs"]
@@ -22,9 +22,9 @@ name = "Аими"
 color = Color(1, 0.604017, 0.571223, 1)
 
 [sub_resource type="Resource" id="Resource_mwnwc"]
-resource_name = "Натсуми"
+resource_name = "Накима"
 script = ExtResource("1_mgf42")
-name = "Натсуми"
+name = "Накима"
 color = Color(0.616697, 0.826383, 0.940097, 1)
 
 [sub_resource type="Resource" id="Resource_61v6p"]
@@ -39,6 +39,12 @@ script = ExtResource("1_mgf42")
 name = "???"
 color = Color(0, 0, 0, 1)
 
+[sub_resource type="Resource" id="Resource_s0m5l"]
+resource_name = "Накима"
+script = ExtResource("1_mgf42")
+name = "?"
+color = Color(0.615686, 0.827451, 0.941176, 1)
+
 [resource]
 script = ExtResource("2_tdrix")
-characters = Array[ExtResource("1_mgf42")]([SubResource("Resource_0ilsg"), SubResource("Resource_fcafs"), SubResource("Resource_mkd8u"), SubResource("Resource_mwnwc"), SubResource("Resource_61v6p"), SubResource("Resource_urw52")])
+characters = Array[ExtResource("1_mgf42")]([SubResource("Resource_0ilsg"), SubResource("Resource_fcafs"), SubResource("Resource_mkd8u"), SubResource("Resource_mwnwc"), SubResource("Resource_61v6p"), SubResource("Resource_urw52"), SubResource("Resource_s0m5l")])
