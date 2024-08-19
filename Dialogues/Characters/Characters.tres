@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="CharacterList" load_steps=10 format=3]
+[gd_resource type="Resource" script_class="CharacterList" load_steps=14 format=3 uid="uid://cocm0xcth3q0t"]
 
 [ext_resource type="Script" path="res://addons/dialogue_nodes/objects/Character.gd" id="1_mgf42"]
 [ext_resource type="Script" path="res://addons/dialogue_nodes/objects/CharacterList.gd" id="2_tdrix"]
@@ -6,7 +6,7 @@
 [sub_resource type="Resource" id="Resource_0ilsg"]
 resource_name = "гг"
 script = ExtResource("1_mgf42")
-name = "цув"
+name = "727"
 color = Color(0.817802, 0.817802, 0.814794, 1)
 
 [sub_resource type="Resource" id="Resource_fcafs"]
@@ -45,6 +45,30 @@ script = ExtResource("1_mgf42")
 name = "?"
 color = Color(0.615686, 0.827451, 0.941176, 1)
 
+[sub_resource type="Resource" id="Resource_udrs8"]
+resource_name = "Мама"
+script = ExtResource("1_mgf42")
+name = "Мама"
+color = Color(0.45, 0.569167, 1, 1)
+
+[sub_resource type="Resource" id="Resource_s0cvi"]
+resource_name = "Учитель"
+script = ExtResource("1_mgf42")
+name = "Учитель"
+color = Color(0.7935, 0.41, 1, 1)
+
+[sub_resource type="Resource" id="Resource_y7rre"]
+resource_name = "Задира 1"
+script = ExtResource("1_mgf42")
+name = "Задира 1"
+color = Color(1, 0.6375, 0.25, 1)
+
+[sub_resource type="Resource" id="Resource_6a31m"]
+resource_name = "Задира 2"
+script = ExtResource("1_mgf42")
+name = "Задира 2"
+color = Color(1, 0.919, 0.19, 1)
+
 [resource]
 script = ExtResource("2_tdrix")
-characters = Array[ExtResource("1_mgf42")]([SubResource("Resource_0ilsg"), SubResource("Resource_fcafs"), SubResource("Resource_mkd8u"), SubResource("Resource_mwnwc"), SubResource("Resource_61v6p"), SubResource("Resource_urw52"), SubResource("Resource_s0m5l")])
+characters = Array[ExtResource("1_mgf42")]([SubResource("Resource_0ilsg"), SubResource("Resource_fcafs"), SubResource("Resource_mkd8u"), SubResource("Resource_mwnwc"), SubResource("Resource_61v6p"), SubResource("Resource_urw52"), SubResource("Resource_s0m5l"), SubResource("Resource_udrs8"), SubResource("Resource_s0cvi"), SubResource("Resource_y7rre"), SubResource("Resource_6a31m")])
