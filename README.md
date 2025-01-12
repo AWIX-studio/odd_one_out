@@ -48,7 +48,7 @@ The main character meets girls, but deep down he considers himself superfluous. 
   Software and sources
 </h2>
 
-- OS - [Windows 10](https://www.microsoft.com/ru-ru/software-download/windows10)
+- OS - [Windows 10](https://www.microsoft.com/ru-ru/software-download/windows10), [EndeavourOS](https://endeavouros.com/)
 - Engine - [Godot v4.2.2 stable.official](https://github.com/godotengine/godot/releases/tag/4.2.2-stable)
 - Dialogue addon - [DialogueNodes](https://github.com/nagidev/DialogueNodes)
 - DAW - [FL Studio v21.2.2](https://www.image-line.com/)
