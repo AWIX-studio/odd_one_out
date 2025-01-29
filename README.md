@@ -2,7 +2,7 @@
   Odd One Out!
 </h1>
 
-![main menu screenshot](https://media.discordapp.net/attachments/1060638115494117496/1265920894056927323/image.png?ex=66a34434&is=66a1f2b4&hm=f53b57bf99dd60cb2dda6045a258d1b063bcf719551b8f3a4fa1af9674a2f851&=&format=webp&quality=lossless&width=768&height=432)
+![main menu screenshot](https://prnt.sc/k35VRROBI0o2)
 
 **Godot project**, anime visual novel.
 
