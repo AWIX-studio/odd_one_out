@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="DialogueData" load_steps=2 format=3]
+[gd_resource type="Resource" script_class="DialogueData" load_steps=2 format=3 uid="uid://dyx656sjiutjq"]
 
 [ext_resource type="Script" path="res://addons/dialogue_nodes/objects/DialogueData.gd" id="1_7q5ow"]
 
@@ -259,7 +259,7 @@ nodes = {
 "text": ""
 }
 },
-"size": Vector2(300.002, 240),
+"size": Vector2(300, 240),
 "speaker": 3
 },
 "1_112": {
@@ -350,7 +350,7 @@ nodes = {
 "text": ""
 }
 },
-"size": Vector2(300.002, 240),
+"size": Vector2(300, 240),
 "speaker": 0
 },
 "1_119": {
@@ -363,7 +363,7 @@ nodes = {
 "text": ""
 }
 },
-"size": Vector2(300.002, 240),
+"size": Vector2(300, 240),
 "speaker": 3
 },
 "1_12": {
@@ -402,7 +402,7 @@ nodes = {
 "text": ""
 }
 },
-"size": Vector2(300.002, 240),
+"size": Vector2(300, 240),
 "speaker": 3
 },
 "1_122": {
@@ -415,7 +415,7 @@ nodes = {
 "text": ""
 }
 },
-"size": Vector2(300.001, 240),
+"size": Vector2(300, 240),
 "speaker": ""
 },
 "1_123": {
@@ -441,7 +441,7 @@ nodes = {
 "text": ""
 }
 },
-"size": Vector2(300.002, 240),
+"size": Vector2(300, 240),
 "speaker": 1
 },
 "1_125": {
@@ -472,7 +472,7 @@ nodes = {
 "text": "Я очень уважаю художество."
 }
 },
-"size": Vector2(300, 243),
+"size": Vector2(300, 290),
 "speaker": 1
 },
 "1_127": {
@@ -641,7 +641,7 @@ nodes = {
 "text": ""
 }
 },
-"size": Vector2(300.001, 240),
+"size": Vector2(300, 240),
 "speaker": 1
 },
 "1_139": {
@@ -737,7 +737,7 @@ nodes = {
 "text": "Хорошая, интересная девочка"
 }
 },
-"size": Vector2(300, 243),
+"size": Vector2(300, 290),
 "speaker": 1
 },
 "1_145": {
@@ -846,7 +846,7 @@ nodes = {
 "text": "Приглашаю Накиму"
 }
 },
-"size": Vector2(300, 242),
+"size": Vector2(300, 289),
 "speaker": ""
 },
 "1_152": {
@@ -1196,7 +1196,7 @@ nodes = {
 "text": ""
 }
 },
-"size": Vector2(300, 240.001),
+"size": Vector2(300, 240),
 "speaker": 5
 },
 "1_33": {
@@ -1261,7 +1261,7 @@ nodes = {
 "text": ""
 }
 },
-"size": Vector2(300.002, 240),
+"size": Vector2(300, 240),
 "speaker": ""
 },
 "1_38": {
@@ -1274,7 +1274,7 @@ nodes = {
 "text": ""
 }
 },
-"size": Vector2(300.002, 240),
+"size": Vector2(300, 240),
 "speaker": 5
 },
 "1_39": {
@@ -1341,7 +1341,7 @@ nodes = {
 "text": ""
 }
 },
-"size": Vector2(300.002, 240),
+"size": Vector2(300, 240),
 "speaker": 5
 },
 "1_43": {
@@ -1406,7 +1406,7 @@ nodes = {
 "text": ""
 }
 },
-"size": Vector2(300.002, 240),
+"size": Vector2(300, 240),
 "speaker": ""
 },
 "1_48": {
@@ -1627,7 +1627,7 @@ nodes = {
 "text": ""
 }
 },
-"size": Vector2(300.002, 240),
+"size": Vector2(300, 240),
 "speaker": ""
 },
 "1_63": {
@@ -1640,7 +1640,7 @@ nodes = {
 "text": ""
 }
 },
-"size": Vector2(300.002, 240),
+"size": Vector2(300, 240),
 "speaker": ""
 },
 "1_64": {
@@ -1666,7 +1666,7 @@ nodes = {
 "text": ""
 }
 },
-"size": Vector2(300.002, 240),
+"size": Vector2(300, 240),
 "speaker": ""
 },
 "1_66": {
@@ -1679,7 +1679,7 @@ nodes = {
 "text": ""
 }
 },
-"size": Vector2(300.002, 240),
+"size": Vector2(300, 240),
 "speaker": ""
 },
 "1_67": {
@@ -1757,7 +1757,7 @@ nodes = {
 "text": ""
 }
 },
-"size": Vector2(300.002, 240),
+"size": Vector2(300, 240),
 "speaker": 1
 },
 "1_72": {
@@ -1796,7 +1796,7 @@ nodes = {
 "text": ""
 }
 },
-"size": Vector2(300.002, 240),
+"size": Vector2(300, 240),
 "speaker": ""
 },
 "1_75": {
@@ -1835,7 +1835,7 @@ nodes = {
 "text": ""
 }
 },
-"size": Vector2(300.002, 240),
+"size": Vector2(300, 240),
 "speaker": ""
 },
 "1_78": {
@@ -2056,7 +2056,7 @@ nodes = {
 "text": ""
 }
 },
-"size": Vector2(300.003, 240),
+"size": Vector2(300, 240),
 "speaker": ""
 },
 "1_93": {
@@ -2162,7 +2162,7 @@ nodes = {
 },
 "3_11": {
 "link": &"1_146",
-"offset": Vector2(44420, 1760),
+"offset": Vector2(44380, 1720),
 "signalValue": "NakimaGood"
 },
 "3_12": {
@@ -2172,7 +2172,7 @@ nodes = {
 },
 "3_13": {
 "link": &"1_148",
-"offset": Vector2(50820, 1700),
+"offset": Vector2(50820, 1640),
 "signalValue": "VakumiGood"
 },
 "3_14": {
@@ -2229,7 +2229,7 @@ nodes = {
 variables = {
 "name": {
 "type": 4,
-"value": "13213"
+"value": "213"
 }
 }
 strays = Array[String]([])
