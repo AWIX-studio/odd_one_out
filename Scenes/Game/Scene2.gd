@@ -8,7 +8,7 @@ var Nakima : int
 
 
 func _ready():
-	current_start = 'START1'
+	current_start = BufferVariables.current_start
 	_on_dialogue_box_dialogue_signal(current_start) # Вызывается первый диалог. По умолчанию 'START1'
 	$DialogueBox.data = preload("res://Dialogues/chapter 0.tres") # Указывается начальный Диалог
 # Пока я не нашёл применения этой функции. Ваще удалить надо наверное. Но в прошлом она использовалась для последовательных вызовов диалогов.
@@ -47,9 +47,10 @@ func _on_dialogue_box_dialogue_signal(_value): # _value : String
 			$BG/BGImage.texture = preload('res://Textures/BGs/school class evening.png')
 		if _value == 'START3':
 			$BG/BGImage.texture = preload("res://Textures/BGs/wakumi's house.jpeg")
-			
+	
 	if 'Scene' in _value:
 		if _value == 'Scene2':
 			get_tree().change_scene_to_file("res://Scenes/Game/Scene2.tscn")
-	
-	_select_dialogue(_value)
+		
+		
+		_select_dialogue(_value)

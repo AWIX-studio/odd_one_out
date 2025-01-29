@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="DialogueData" load_steps=2 format=3 uid="uid://dyx656sjiutjq"]
+[gd_resource type="Resource" script_class="DialogueData" load_steps=2 format=3 uid="uid://vh3vg5tk62q8"]
 
 [ext_resource type="Script" path="res://addons/dialogue_nodes/objects/DialogueData.gd" id="1_7q5ow"]
 
@@ -897,11 +897,11 @@ nodes = {
 8. Без вариантов, сделать salat
 9. Они слишком лейм для реп батла со мной
 10. 7 патронов и магазин в кармане на 52",
-"offset": Vector2(53796.2, 2097.36),
+"offset": Vector2(53920, 2120),
 "options": {
 0: {
 "condition": {},
-"link": "END",
+"link": &"3_16",
 "text": ""
 }
 },
@@ -915,7 +915,7 @@ nodes = {
 Номер 2 - толбаеб
 Номер 1 - Koiloфаr
 5. Питер естественно брат",
-"offset": Vector2(53599.5, 2401.94),
+"offset": Vector2(53560, 2440),
 "options": {
 0: {
 "condition": {},
@@ -2185,6 +2185,11 @@ nodes = {
 "offset": Vector2(52400, 2440),
 "signalValue": "NakimaGood"
 },
+"3_16": {
+"link": "END",
+"offset": Vector2(54340, 2420),
+"signalValue": "Scene2"
+},
 "3_2": {
 "link": "END",
 "offset": Vector2(4569.25, 242.698),
@@ -2229,7 +2234,7 @@ nodes = {
 variables = {
 "name": {
 "type": 4,
-"value": "213"
+"value": "awed"
 }
 }
 strays = Array[String]([])

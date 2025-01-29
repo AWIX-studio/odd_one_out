@@ -57,6 +57,8 @@ func _on_play_pressed():
 
 func _on_new_game_pressed():
 	if $SetName/TextEdit.text != "":
+		DataManager.save('Start', null)
+		DataManager.save('Scene', null)
 		save_game()
 		set_player_name($SetName/TextEdit.text)
 		get_tree().change_scene_to_file('res://Scenes/Game/Scene1.tscn')
@@ -144,7 +146,8 @@ func load_game():
 
 
 func _on_load_pressed():
-	pass
+	if DataManager.load('Scene') != null:
+		get_tree().change_scene_to_file('res://Scenes/Game/' + DataManager.load('Scene') + '.tscn')
 
 
 func apply_options(dict : Dictionary):

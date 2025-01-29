@@ -232,5 +232,7 @@ libraries = {
 one_shot = true
 
 [connection signal="pressed" from="SideMenu/VBoxContainer/Resume" to="." method="_on_resume_pressed"]
+[connection signal="button_down" from="SideMenu/VBoxContainer/Save" to="." method="_on_save_button_down"]
+[connection signal="button_down" from="SideMenu/VBoxContainer/Load" to="." method="_on_load_button_down"]
 [connection signal="pressed" from="SideMenu/VBoxContainer/Exit" to="." method="_on_exit_pressed"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
