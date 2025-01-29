@@ -47,6 +47,7 @@ texture = ExtResource("10_qxvne")
 expand_mode = 1
 
 [node name="DialogueBox" type="Panel" parent="."]
+visible = false
 custom_minimum_size = Vector2(1000, 175)
 layout_mode = 1
 anchors_preset = 7
@@ -68,7 +69,6 @@ skip_input_action = "skip"
 custom_effects = Array[RichTextEffect]([SubResource("RichTextEffect_euf8c"), SubResource("RichTextEffect_exmgv"), SubResource("RichTextEffect_q18at")])
 
 [node name="PauseMenu" parent="." instance=ExtResource("9_fvdnj")]
-unique_name_in_owner = true
 visible = false
 layout_mode = 1
 

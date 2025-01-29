@@ -3,7 +3,8 @@
 class_name DialogueBox
 extends Panel
  
-@onready var pauseMenu := %PauseMenu
+@onready var pauseMenu := $"../PauseMenu"
+
 
 ## Triggered when a dialogue has started. Passes [param id] of the dialogue tree as defined in the StartNode.
 signal dialogue_started(id : String)

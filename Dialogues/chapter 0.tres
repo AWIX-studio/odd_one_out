@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="DialogueData" load_steps=2 format=3 uid="uid://dhp8muavttoyr"]
+[gd_resource type="Resource" script_class="DialogueData" load_steps=2 format=3]
 
 [ext_resource type="Script" path="res://addons/dialogue_nodes/objects/DialogueData.gd" id="1_7q5ow"]
 
@@ -2229,7 +2229,7 @@ nodes = {
 variables = {
 "name": {
 "type": 4,
-"value": "727"
+"value": "13213"
 }
 }
 strays = Array[String]([])
