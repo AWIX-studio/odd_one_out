@@ -2,7 +2,7 @@
   Odd One Out!
 </h1>
 
-![main menu screenshot](https://media.discordapp.net/attachments/1060638115494117496/1265920894056927323/image.png?ex=66a34434&is=66a1f2b4&hm=f53b57bf99dd60cb2dda6045a258d1b063bcf719551b8f3a4fa1af9674a2f851&=&format=webp&quality=lossless&width=768&height=432)
+![изображение](https://github.com/user-attachments/assets/bdae4180-75ac-49bd-bd65-1f69f335a2d3)
 
 **Godot project**, anime visual novel.
 
@@ -48,7 +48,7 @@ The main character meets girls, but deep down he considers himself superfluous. 
   Software and sources
 </h2>
 
-- OS - [Windows 10](https://www.microsoft.com/ru-ru/software-download/windows10), [EndeavourOS](https://endeavouros.com/)
+- OS - [Windows 10](https://www.microsoft.com/ru-ru/software-download/windows10)
 - Engine - [Godot v4.2.2 stable.official](https://github.com/godotengine/godot/releases/tag/4.2.2-stable)
 - Dialogue addon - [DialogueNodes](https://github.com/nagidev/DialogueNodes)
 - DAW - [FL Studio v21.2.2](https://www.image-line.com/)

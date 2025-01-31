@@ -16,6 +16,16 @@ config/features=PackedStringArray("4.3", "Forward Plus")
 boot_splash/bg_color=Color(0.952941, 0.866667, 0.913725, 1)
 config/icon="res://Textures/Icon.jpg"
 
+[audio]
+
+buses/default_bus_layout=""
+
+[autoload]
+
+BufferVariables="*res://Game_data/buffer_variables.gd"
+RoutesManager="*res://Game_data/routes_manager.gd"
+DataManager="*res://Game_data/data_manager.gd"
+
 [display]
 
 window/size/resizable=false

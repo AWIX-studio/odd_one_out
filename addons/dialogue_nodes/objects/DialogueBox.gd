@@ -5,6 +5,7 @@ extends Panel
  
 @onready var pauseMenu := %PauseMenu
 
+
 ## Triggered when a dialogue has started. Passes [param id] of the dialogue tree as defined in the StartNode.
 signal dialogue_started(id : String)
 ## Triggered when a single dialogue block has been processed.
@@ -247,7 +248,7 @@ func _input(event):
 			if _wait_effect:
 				_wait_effect.skip = true
 			_on_wait_finished()
-		
+	
 		# code by awed
 		elif is_running() and Input.is_action_just_pressed(skip_input_action) and options_container.visible:
 			var options_count = 0
