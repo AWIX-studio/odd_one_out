@@ -4,15 +4,17 @@
 
 [resource]
 script = ExtResource("1_mj63o")
-starts = {}
+starts = {
+"START": &"0_1"
+}
 nodes = {
 "0_1": {
-"link": "END",
+"link": &"1_1",
 "offset": Vector2(-14, 181),
 "start_id": "START"
 },
 "1_1": {
-"dialogue": "",
+"dialogue": "Hello... [wait time=10]user!",
 "offset": Vector2(320, 220),
 "options": {
 0: {
@@ -22,9 +24,9 @@ nodes = {
 }
 },
 "size": Vector2(300, 240),
-"speaker": -1
+"speaker": "Dev"
 }
 }
 variables = {}
-strays = Array[String](["0_1", "1_1"])
+strays = Array[String]([])
 characters = "res://Test/Dialogues/Test SAcene1.tres"

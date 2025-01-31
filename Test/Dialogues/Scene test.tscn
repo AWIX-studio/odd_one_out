@@ -1,0 +1,82 @@
+[gd_scene load_steps=13 format=3 uid="uid://b5jpo7ahr7d0y"]
+
+[ext_resource type="Script" path="res://Test/Dialogues/scene_test.gd" id="1_oj337"]
+[ext_resource type="Texture2D" uid="uid://buqoebexr7wug" path="res://Textures/BGs/night park.png" id="2_0r7sl"]
+[ext_resource type="Theme" uid="uid://cbf7j8no5y0jt" path="res://Themes/Test SAcene.tres" id="3_v8nrx"]
+[ext_resource type="StyleBox" uid="uid://1fji6e7tyj68" path="res://Themes/Test SAcene BG.tres" id="4_f63ne"]
+[ext_resource type="Script" path="res://addons/dialogue_nodes/objects/DialogueBox.gd" id="5_i80dj"]
+[ext_resource type="Script" path="res://addons/dialogue_nodes/objects/bbcodeWait.gd" id="6_kop6o"]
+[ext_resource type="Script" path="res://addons/dialogue_nodes/objects/bbcodeGhost.gd" id="7_airg6"]
+[ext_resource type="Script" path="res://addons/dialogue_nodes/objects/bbcodeMatrix.gd" id="8_efoc2"]
+[ext_resource type="PackedScene" uid="uid://dhcex8jyifhts" path="res://Scenes/Menu/PauseMenu.tscn" id="9_w8a2o"]
+
+[sub_resource type="RichTextEffect" id="RichTextEffect_euf8c"]
+script = ExtResource("6_kop6o")
+
+[sub_resource type="RichTextEffect" id="RichTextEffect_exmgv"]
+script = ExtResource("7_airg6")
+
+[sub_resource type="RichTextEffect" id="RichTextEffect_q18at"]
+script = ExtResource("8_efoc2")
+
+[node name="Scene1" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_oj337")
+
+[node name="BG" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BGImage" type="TextureRect" parent="BG"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_0r7sl")
+expand_mode = 1
+
+[node name="DialogueBox" type="Panel" parent="."]
+visible = false
+custom_minimum_size = Vector2(1000, 175)
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -500.0
+offset_top = -208.0
+offset_right = 500.0
+offset_bottom = -33.0
+grow_horizontal = 2
+grow_vertical = 0
+theme = ExtResource("3_v8nrx")
+theme_override_styles/panel = ExtResource("4_f63ne")
+script = ExtResource("5_i80dj")
+hide_portrait = true
+skip_input_action = "skip"
+custom_effects = Array[RichTextEffect]([SubResource("RichTextEffect_euf8c"), SubResource("RichTextEffect_exmgv"), SubResource("RichTextEffect_q18at")])
+
+[node name="PauseMenu" parent="." instance=ExtResource("9_w8a2o")]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+
+[node name="Timer" type="Timer" parent="."]
+process_callback = 0
+one_shot = true
+
+[connection signal="dialogue_ended" from="DialogueBox" to="." method="_on_dialogue_box_dialogue_ended"]
+[connection signal="dialogue_signal" from="DialogueBox" to="." method="_on_dialogue_box_dialogue_signal"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
