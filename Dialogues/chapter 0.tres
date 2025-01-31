@@ -10,6 +10,8 @@ starts = {
 "START11": &"0_11",
 "START12": &"0_12",
 "START13": &"0_13",
+"START14": &"0_14",
+"START15": &"0_15",
 "START2": &"0_2",
 "START3": &"0_3",
 "START4": &"0_4",
@@ -44,6 +46,16 @@ nodes = {
 "link": &"1_202",
 "offset": Vector2(70114.1, 2320.43),
 "start_id": "START13"
+},
+"0_14": {
+"link": &"1_241",
+"offset": Vector2(83821.2, 2430.02),
+"start_id": "START14"
+},
+"0_15": {
+"link": &"1_243",
+"offset": Vector2(84762.7, 2456.02),
+"start_id": "START15"
 },
 "0_2": {
 "link": &"1_7",
@@ -2147,12 +2159,129 @@ nodes = {
 "options": {
 0: {
 "condition": {},
-"link": "END",
+"link": &"3_20",
 "text": ""
 }
 },
 "size": Vector2(300, 240),
 "speaker": 5
+},
+"1_241": {
+"dialogue": "И вот опять, я проснулся в холодном поту и с сильной отдышкой. Я не понимаю, что происходит, почему мне такое снится и что всë это значит.",
+"offset": Vector2(84040, 2420),
+"options": {
+0: {
+"condition": {},
+"link": &"1_242",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": ""
+},
+"1_242": {
+"dialogue": "Чтобы перевести дух я сразу встал и пошëл умываться.",
+"offset": Vector2(84398.1, 2468.02),
+"options": {
+0: {
+"condition": {},
+"link": &"3_19",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": ""
+},
+"1_243": {
+"dialogue": "Я почистил зубы, выплюнул воду и с ужасом заметил, что раковина вся в моей крови.",
+"offset": Vector2(84968.7, 2540.02),
+"options": {
+0: {
+"condition": {},
+"link": &"1_244",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": ""
+},
+"1_244": {
+"dialogue": "ААА!",
+"offset": Vector2(85321.4, 2534.02),
+"options": {
+0: {
+"condition": {},
+"link": &"1_245",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": 0
+},
+"1_245": {
+"dialogue": "Я попятился назад и ударился головой о дверцу шкафа. Открыв глаза и посмотрев на раковину я не заметил и следа крови.",
+"offset": Vector2(85660, 2500),
+"options": {
+0: {
+"condition": {},
+"link": &"1_246",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": ""
+},
+"1_246": {
+"dialogue": "Показалось что ли...",
+"offset": Vector2(86032.3, 2458.02),
+"options": {
+0: {
+"condition": {},
+"link": &"1_247",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": 0
+},
+"1_247": {
+"dialogue": "Тут в ванну зашла мама.",
+"offset": Vector2(86400, 2380),
+"options": {
+0: {
+"condition": {},
+"link": &"1_248",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": ""
+},
+"1_248": {
+"dialogue": "Что случилось?!",
+"offset": Vector2(86754.7, 2412.02),
+"options": {
+0: {
+"condition": {},
+"link": &"1_249",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": 7
+},
+"1_249": {
+"dialogue": "Да... Я ударился об шкаф случайно...",
+"offset": Vector2(87140.5, 2454.02),
+"options": {
+0: {
+"condition": {},
+"link": &"1_250",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": 0
 },
 "1_25": {
 "dialogue": "Да и я поступил очень плохо, сильно нагрубил тебе, и упал в твоих глазах, но я считаю, что при падении, никогда не поздно попытаться встать. Так что ещë раз, прости меня, молю, Вакуми! Я ведь люблю тебя! ",
@@ -2166,6 +2295,84 @@ nodes = {
 },
 "size": Vector2(352, 240),
 "speaker": 0
+},
+"1_250": {
+"dialogue": "Господи, и зачем же так пугать... Шишки хотя бы не осталось?",
+"offset": Vector2(87492, 2494.02),
+"options": {
+0: {
+"condition": {},
+"link": &"1_251",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": 7
+},
+"1_251": {
+"dialogue": "Я пощупал место ушиба.",
+"offset": Vector2(87780, 2140),
+"options": {
+0: {
+"condition": {},
+"link": &"1_252",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": ""
+},
+"1_252": {
+"dialogue": "Да вроде нет...",
+"offset": Vector2(88100, 2220),
+"options": {
+0: {
+"condition": {},
+"link": &"1_253",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": 0
+},
+"1_253": {
+"dialogue": "Слава богу. Так, ну, я пошла на работу, не забудь в комнате убраться.",
+"offset": Vector2(88460, 2240),
+"options": {
+0: {
+"condition": {},
+"link": &"1_254",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": 7
+},
+"1_254": {
+"dialogue": "Ага, пока.",
+"offset": Vector2(88800, 2280.02),
+"options": {
+0: {
+"condition": {},
+"link": &"1_255",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": 0
+},
+"1_255": {
+"dialogue": "Стоп, но мама уходит на работу в 11 часов... Чëрт, я опаздываю!",
+"offset": Vector2(89150, 2292.02),
+"options": {
+0: {
+"condition": {},
+"link": "END",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": ""
 },
 "1_26": {
 "dialogue": "Я уже не могу сдерживать эмоци...",
@@ -3272,10 +3479,20 @@ nodes = {
 "offset": Vector2(70080.2, 2528.16),
 "signalValue": "START13"
 },
+"3_19": {
+"link": "END",
+"offset": Vector2(84766.5, 2746.02),
+"signalValue": "START15"
+},
 "3_2": {
 "link": "END",
 "offset": Vector2(4569.25, 242.698),
 "signalValue": "START3"
+},
+"3_20": {
+"link": "END",
+"offset": Vector2(83796.4, 2658.02),
+"signalValue": "START14"
 },
 "3_3": {
 "link": "END",

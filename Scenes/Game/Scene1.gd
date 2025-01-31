@@ -8,7 +8,7 @@ var Nakima : int
 
 
 func _ready():
-	current_start = 'START1'
+	current_start = 'START14'
 	_on_dialogue_box_dialogue_signal(current_start) # Вызывается первый диалог. По умолчанию 'START1'
 	$DialogueBox.data = preload("res://Dialogues/chapter 0.tres") # Указывается начальный Диалог
 # Пока я не нашёл применения этой функции. Ваще удалить надо наверное. Но в прошлом она использовалась для последовательных вызовов диалогов.
