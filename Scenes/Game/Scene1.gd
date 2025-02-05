@@ -52,6 +52,8 @@ func _on_dialogue_box_dialogue_signal(_value): # _value : String
 			
 	if 'Scene' in _value:
 		if _value == 'Scene2':
+			routes_manager.add_relation("Vakumi", Vakumi)
+			routes_manager.add_relation("Nakima", Nakima)
 			get_tree().change_scene_to_file("res://Scenes/Game/Scene2.tscn")
 	
 	
