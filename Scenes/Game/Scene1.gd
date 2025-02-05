@@ -47,9 +47,11 @@ func _on_dialogue_box_dialogue_signal(_value): # _value : String
 			$BG/BGImage.texture = preload('res://Textures/BGs/school class evening.png')
 		if _value == 'START3':
 			$BG/BGImage.texture = preload("res://Textures/BGs/wakumi's house.jpeg")
+		
+		_select_dialogue(_value)
 			
 	if 'Scene' in _value:
 		if _value == 'Scene2':
 			get_tree().change_scene_to_file("res://Scenes/Game/Scene2.tscn")
 	
-	_select_dialogue(_value)
+	
