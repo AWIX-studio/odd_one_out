@@ -12,7 +12,7 @@
   Game status
 </h2>
 
-At the **initial stage**
+dead.
 
 ---
 
